@@ -1,0 +1,46 @@
+[
+  {
+    "id": "enq-1793633503168",
+    "createdAt": "2026-11-02T15:31:43.168Z",
+    "name": "Ananya Deshmukh",
+    "phone": "+91 79073 18843",
+    "email": "ananya@example.com",
+    "destination": "Bali Serenity Escape",
+    "packageSlug": "bali-escape",
+    "adults": "2",
+    "children": "1",
+    "preferredDate": "2026-12-28",
+    "message": "Looking for beachfront villa and private chef dinner.",
+    "status": "pending"
+  },
+  {
+    "id": "enq-1730560001",
+    "createdAt": "2026-11-02T10:15:00.000Z",
+    "name": "Vikramaditya Sharma",
+    "phone": "+91 98451 23456",
+    "email": "vikram.sharma@example.com",
+    "destination": "Switzerland Explorer",
+    "packageSlug": "switzerland-explorer",
+    "adults": "2",
+    "children": "1",
+    "preferredDate": "2026-12-20",
+    "message": "Interested in private chalet stays with direct Matterhorn views and first-class Glacier Express tickets.",
+    "status": "pending",
+    "notes": "Prefers evening contact after 6 PM."
+  },
+  {
+    "id": "enq-1730558002",
+    "createdAt": "2026-11-01T16:30:00.000Z",
+    "name": "Priya Nair",
+    "phone": "+91 79073 18843",
+    "email": "priya.nair@example.com",
+    "destination": "Amalfi Coast & Capri Odyssey",
+    "packageSlug": "amalfi-coast-odyssey",
+    "adults": "2",
+    "children": "0",
+    "preferredDate": "2027-01-10",
+    "message": "Honeymoon inquiry. Looking for ocean cliffside villa in Positano and private sunset sail.",
+    "status": "followed_up",
+    "notes": "Spoke on WhatsApp. Sent tailored PDF proposal with private boat sail."
+  }
+]
