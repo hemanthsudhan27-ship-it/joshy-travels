@@ -79,37 +79,62 @@ export default function HomeTab() {
     }
   };
 
-  const handleImageUpload = async (file: File) => {
-    setUploadingImage(true);
-    setStatus(null);
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("folder", "public/images/about");
+  const handleImageUpload = (file: File) => {
+    if (!data) return;
 
-      const res = await fetch("/api/admin/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const json = await res.json();
-      if (json.url && data) {
-        setData({
-          ...data,
-          aboutSneak: {
-            ...data.aboutSneak,
-            image: json.url,
-          },
-        });
-        setStatus({ type: "success", text: "Photo uploaded successfully!" });
-      } else {
-        throw new Error(json.error || "Upload failed");
+    // 1. Instant client preview
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const base64 = e.target?.result as string;
+      if (base64) {
+        setData((prev) =>
+          prev
+            ? {
+                ...prev,
+                aboutSneak: {
+                  ...prev.aboutSneak,
+                  image: base64,
+                },
+              }
+            : null
+        );
+        setStatus({ type: "success", text: "Photo selected and preview updated!" });
       }
-    } catch (err) {
-      setStatus({ type: "error", text: err instanceof Error ? err.message : "Photo upload failed" });
-    } finally {
-      setUploadingImage(false);
-    }
+
+      // 2. Background upload
+      setUploadingImage(true);
+      try {
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("folder", "public/images/about");
+
+        const res = await fetch("/api/admin/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        const json = await res.json();
+        if (json.url) {
+          setData((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  aboutSneak: {
+                    ...prev.aboutSneak,
+                    image: json.url,
+                  },
+                }
+              : null
+          );
+          setStatus({ type: "success", text: "Photo uploaded & committed to GitHub!" });
+        }
+      } catch (err) {
+        console.warn("Background upload error, using local preview:", err);
+      } finally {
+        setUploadingImage(false);
+      }
+    };
+    reader.readAsDataURL(file);
   };
 
   if (loading) {
@@ -385,24 +410,30 @@ export default function HomeTab() {
               </label>
 
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-white/15 bg-black">
-                {data.aboutSneak.image && (
+                {data.aboutSneak.image ? (
                   <Image
                     src={data.aboutSneak.image}
                     alt="About preview"
                     fill
+                    unoptimized
                     className="object-cover"
                   />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-xs text-white/40">
+                    No Image Selected
+                  </div>
                 )}
                 {uploadingImage && (
-                  <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2">
                     <Loader2 className="w-6 h-6 animate-spin text-gold" />
+                    <span className="text-[10px] text-white/80 font-mono">Uploading to GitHub...</span>
                   </div>
                 )}
               </div>
 
-              <label className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-white/20 text-white text-xs font-semibold hover:border-gold hover:text-gold transition-colors cursor-pointer">
+              <label className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gold/15 border border-gold/40 text-gold text-xs font-semibold hover:bg-gold hover:text-black transition-colors cursor-pointer shadow-lg shadow-gold/10">
                 <Upload className="w-3.5 h-3.5" />
-                <span>Upload New Photo</span>
+                <span>Select Photo from Device</span>
                 <input
                   type="file"
                   accept="image/*"
@@ -413,6 +444,24 @@ export default function HomeTab() {
                   }}
                 />
               </label>
+
+              <div>
+                <label className="block text-[10px] uppercase tracking-wider text-white/50 mb-1">
+                  Or Image URL / Path:
+                </label>
+                <input
+                  type="text"
+                  value={data.aboutSneak.image}
+                  onChange={(e) =>
+                    setData({
+                      ...data,
+                      aboutSneak: { ...data.aboutSneak, image: e.target.value },
+                    })
+                  }
+                  placeholder="/images/about/..."
+                  className="w-full px-3 py-1.5 rounded-lg bg-black border border-white/10 text-white text-[11px] focus:outline-none focus:border-gold font-mono"
+                />
+              </div>
             </div>
           </div>
         </div>

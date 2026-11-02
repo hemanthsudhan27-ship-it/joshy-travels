@@ -181,7 +181,7 @@ export async function saveUploadedImage(
   folderPath: string, // e.g. "public/images/packages"
   file: File,
   commitPrefix = 'admin: upload image'
-): Promise<{ filePath: string; publicUrl: string }> {
+): Promise<{ filePath: string; publicUrl: string; dataUrl: string; rawUrl?: string }> {
   const buffer = Buffer.from(await file.arrayBuffer())
   const base64Content = buffer.toString('base64')
 
@@ -197,7 +197,9 @@ export async function saveUploadedImage(
   const repoFilePath = `${folderPath.replace(/^\/+/, '')}/${fileName}`
 
   // Public URL accessible on the web
-  const publicUrl = repoFilePath.replace(/^public/, '')
+  const publicUrl = `/${repoFilePath.replace(/^public\//, '')}`
+  const dataUrl = `data:image/${ext};base64,${base64Content}`
+  const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${repoFilePath}`
 
   // 1. Write locally
   try {
@@ -224,5 +226,7 @@ export async function saveUploadedImage(
   return {
     filePath: repoFilePath,
     publicUrl,
+    dataUrl,
+    rawUrl,
   }
 }

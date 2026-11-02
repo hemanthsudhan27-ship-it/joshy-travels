@@ -104,39 +104,63 @@ export default function AboutTab() {
     }
   }
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, targetField: 'hero' | 'story' | 'promise') => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>, targetField: 'hero' | 'story' | 'promise') => {
     const file = e.target.files?.[0]
     if (!file || !data) return
 
-    setUploadingKey(targetField)
-    try {
-      const form = new FormData()
-      form.append('file', file)
-      form.append('subfolder', 'about')
-
-      const res = await fetch('/api/admin/upload', {
-        method: 'POST',
-        body: form,
-      })
-      const result = await res.json()
-
-      if (res.ok && result.publicUrl) {
-        setData({
-          ...data,
-          [targetField]: {
-            ...data[targetField],
-            image: result.publicUrl,
-          },
-        })
-        setMessage({ text: `Image updated for ${targetField} section`, type: 'success' })
-      } else {
-        setMessage({ text: result.error || 'Upload failed', type: 'error' })
+    // 1. Instant client preview
+    const reader = new FileReader()
+    reader.onload = async (event) => {
+      const base64 = event.target?.result as string
+      if (base64) {
+        setData((prev) =>
+          prev
+            ? {
+                ...prev,
+                [targetField]: {
+                  ...prev[targetField],
+                  image: base64,
+                },
+              }
+            : null
+        )
+        setMessage({ text: `Photo selected and preview ready for ${targetField}!`, type: 'success' })
       }
-    } catch {
-      setMessage({ text: 'Image upload failed due to network error', type: 'error' })
-    } finally {
-      setUploadingKey(null)
+
+      // 2. Background upload
+      setUploadingKey(targetField)
+      try {
+        const form = new FormData()
+        form.append('file', file)
+        form.append('folder', 'public/images/about')
+
+        const res = await fetch('/api/admin/upload', {
+          method: 'POST',
+          body: form,
+        })
+        const result = await res.json()
+
+        if (res.ok && result.publicUrl) {
+          setData((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  [targetField]: {
+                    ...prev[targetField],
+                    image: result.publicUrl,
+                  },
+                }
+              : null
+          )
+          setMessage({ text: `Image updated & committed for ${targetField} section`, type: 'success' })
+        }
+      } catch (err) {
+        console.warn('Background upload notice:', err)
+      } finally {
+        setUploadingKey(null)
+      }
     }
+    reader.readAsDataURL(file)
   }
 
   // Milestone helpers

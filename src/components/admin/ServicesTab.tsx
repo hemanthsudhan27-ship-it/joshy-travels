@@ -76,35 +76,46 @@ export default function ServicesTab() {
     }
   };
 
-  const handleImageUpload = async (file: File, serviceIndex: number) => {
+  const handleImageUpload = (file: File, serviceIndex: number) => {
     if (!data) return;
-    setUploadingIdx(serviceIndex);
-    setStatus(null);
 
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("folder", "public/images/services");
-
-      const res = await fetch("/api/admin/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const json = await res.json();
-      if (json.url) {
+    // 1. Instant client preview
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const base64 = e.target?.result as string;
+      if (base64) {
         const updated = [...data.services];
-        updated[serviceIndex].image = json.url;
+        updated[serviceIndex].image = base64;
         setData({ ...data, services: updated });
-        setStatus({ type: "success", text: "Service visual updated successfully!" });
-      } else {
-        throw new Error(json.error || "Upload failed");
+        setStatus({ type: "success", text: "Service visual preview ready!" });
       }
-    } catch (err) {
-      setStatus({ type: "error", text: err instanceof Error ? err.message : "Upload error" });
-    } finally {
-      setUploadingIdx(null);
-    }
+
+      // 2. Background upload
+      setUploadingIdx(serviceIndex);
+      try {
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("folder", "public/images/services");
+
+        const res = await fetch("/api/admin/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        const json = await res.json();
+        if (json.url) {
+          const updated = [...data.services];
+          updated[serviceIndex].image = json.url;
+          setData({ ...data, services: updated });
+          setStatus({ type: "success", text: "Service visual updated & committed to GitHub!" });
+        }
+      } catch (err) {
+        console.warn("Background upload notice:", err);
+      } finally {
+        setUploadingIdx(null);
+      }
+    };
+    reader.readAsDataURL(file);
   };
 
   const addService = () => {
@@ -382,7 +393,7 @@ export default function ServicesTab() {
                     </label>
 
                     <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-white/15 bg-black">
-                      <Image src={svc.image} alt={svc.title} fill className="object-cover" />
+                      <Image src={svc.image} alt={svc.title} fill unoptimized className="object-cover" />
                       {uploadingIdx === idx && (
                         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
                           <Loader2 className="w-5 h-5 animate-spin text-gold" />

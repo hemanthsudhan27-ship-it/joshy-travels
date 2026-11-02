@@ -20,17 +20,30 @@ export async function POST(req: Request) {
 
     const formData = await req.formData()
     const file = formData.get('file') as File | null
-    const folder = (formData.get('folder') as string) || 'public/images/uploads'
+    const requestedFolder =
+      (formData.get('folder') as string) ||
+      (formData.get('subfolder') as string) ||
+      'uploads'
 
     if (!file) {
       return NextResponse.json({ error: 'No image file provided' }, { status: 400 })
     }
 
-    const result = await saveUploadedImage(folder, file, 'admin: upload media')
+    // Ensure folder is within public/images/
+    let normalizedFolder = requestedFolder
+    if (!normalizedFolder.startsWith('public/images/')) {
+      const cleanSub = normalizedFolder.replace(/^public\//, '').replace(/^images\//, '')
+      normalizedFolder = `public/images/${cleanSub}`
+    }
+
+    const result = await saveUploadedImage(normalizedFolder, file, 'admin: upload media')
     return NextResponse.json({
       success: true,
       url: result.publicUrl,
+      publicUrl: result.publicUrl,
       filePath: result.filePath,
+      dataUrl: result.dataUrl,
+      rawUrl: result.rawUrl,
     })
   } catch (error) {
     console.error('Error uploading image:', error)

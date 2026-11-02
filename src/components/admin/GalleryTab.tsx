@@ -96,33 +96,43 @@ export default function GalleryTab() {
     }))
   }
 
-  const handleImageFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
 
-    setUploadingImage(true)
-    try {
-      const uploadData = new FormData()
-      uploadData.append('file', file)
-      uploadData.append('subfolder', 'gallery')
-
-      const res = await fetch('/api/admin/upload', {
-        method: 'POST',
-        body: uploadData,
-      })
-      const result = await res.json()
-
-      if (res.ok && result.publicUrl) {
-        setFormData((prev) => ({ ...prev, image: result.publicUrl }))
-        setMessage({ text: 'Image uploaded and committed to GitHub', type: 'success' })
-      } else {
-        setMessage({ text: result.error || 'Image upload failed', type: 'error' })
+    // 1. Instant client preview
+    const reader = new FileReader()
+    reader.onload = async (event) => {
+      const base64 = event.target?.result as string
+      if (base64) {
+        setFormData((prev) => ({ ...prev, image: base64 }))
+        setMessage({ text: 'Photo selected and preview ready!', type: 'success' })
       }
-    } catch {
-      setMessage({ text: 'Upload failed: network error', type: 'error' })
-    } finally {
-      setUploadingImage(false)
+
+      // 2. Background upload to GitHub
+      setUploadingImage(true)
+      try {
+        const uploadData = new FormData()
+        uploadData.append('file', file)
+        uploadData.append('folder', 'public/images/gallery')
+
+        const res = await fetch('/api/admin/upload', {
+          method: 'POST',
+          body: uploadData,
+        })
+        const result = await res.json()
+
+        if (res.ok && result.publicUrl) {
+          setFormData((prev) => ({ ...prev, image: result.publicUrl }))
+          setMessage({ text: 'Image uploaded and committed to GitHub', type: 'success' })
+        }
+      } catch (err) {
+        console.warn('Background upload notice:', err)
+      } finally {
+        setUploadingImage(false)
+      }
     }
+    reader.readAsDataURL(file)
   }
 
   const handleSaveItem = async (e: React.FormEvent) => {

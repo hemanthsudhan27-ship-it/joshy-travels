@@ -180,34 +180,42 @@ export default function PackagesTab() {
     }
   };
 
-  const handleImageUpload = async (file: File) => {
-    setUploadingImage(true);
-    setStatus(null);
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("folder", "public/images/packages");
+  const handleImageUpload = (file: File) => {
+    if (!editingPkg) return;
 
-      const res = await fetch("/api/admin/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const json = await res.json();
-      if (json.url && editingPkg) {
-        setEditingPkg({
-          ...editingPkg,
-          heroImage: json.url,
-        });
-        setStatus({ type: "success", text: "Photo uploaded & committed to repository!" });
-      } else {
-        throw new Error(json.error || "Upload failed");
+    // 1. Instant Client Preview: Read as Base64 Data URL so preview works immediately on any device
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const base64 = e.target?.result as string;
+      if (base64) {
+        setEditingPkg((prev) => (prev ? { ...prev, heroImage: base64 } : null));
+        setStatus({ type: "success", text: "Photo selected and preview updated!" });
       }
-    } catch (err) {
-      setStatus({ type: "error", text: err instanceof Error ? err.message : "Upload error" });
-    } finally {
-      setUploadingImage(false);
-    }
+
+      // 2. Background Upload to commit as file in GitHub
+      setUploadingImage(true);
+      try {
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("folder", "public/images/packages");
+
+        const res = await fetch("/api/admin/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        const json = await res.json();
+        if (json.url) {
+          setEditingPkg((prev) => (prev ? { ...prev, heroImage: json.url } : null));
+          setStatus({ type: "success", text: "Photo uploaded & committed to repository!" });
+        }
+      } catch (err) {
+        console.warn("Background upload error, using local preview:", err);
+      } finally {
+        setUploadingImage(false);
+      }
+    };
+    reader.readAsDataURL(file);
   };
 
   // Itinerary Day Helpers
@@ -306,6 +314,7 @@ export default function PackagesTab() {
                     src={pkg.heroImage}
                     alt={pkg.title}
                     fill
+                    unoptimized
                     className="object-cover"
                   />
                   <div className="absolute top-2 left-2 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-semibold text-gold border border-white/10">
@@ -580,22 +589,30 @@ export default function PackagesTab() {
                   </label>
 
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-white/15 bg-black">
-                    <Image
-                      src={editingPkg.heroImage}
-                      alt={editingPkg.title}
-                      fill
-                      className="object-cover"
-                    />
+                    {editingPkg.heroImage ? (
+                      <Image
+                        src={editingPkg.heroImage}
+                        alt={editingPkg.title || "Package Photo"}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-xs text-white/40">
+                        No Image Selected
+                      </div>
+                    )}
                     {uploadingImage && (
-                      <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2">
                         <Loader2 className="w-6 h-6 animate-spin text-gold" />
+                        <span className="text-[10px] text-white/80 font-mono">Uploading to GitHub...</span>
                       </div>
                     )}
                   </div>
 
-                  <label className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-white/20 text-white text-xs font-semibold hover:border-gold hover:text-gold transition-colors cursor-pointer">
+                  <label className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gold/15 border border-gold/40 text-gold text-xs font-semibold hover:bg-gold hover:text-black transition-colors cursor-pointer shadow-lg shadow-gold/10">
                     <Upload className="w-3.5 h-3.5" />
-                    <span>Upload New Photo</span>
+                    <span>Select Photo from Device</span>
                     <input
                       type="file"
                       accept="image/*"
@@ -606,6 +623,19 @@ export default function PackagesTab() {
                       }}
                     />
                   </label>
+
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-wider text-white/50 mb-1">
+                      Or Image URL / Path:
+                    </label>
+                    <input
+                      type="text"
+                      value={editingPkg.heroImage}
+                      onChange={(e) => setEditingPkg({ ...editingPkg, heroImage: e.target.value })}
+                      placeholder="/images/packages/..."
+                      className="w-full px-3 py-1.5 rounded-lg bg-black border border-white/10 text-white text-[11px] focus:outline-none focus:border-gold font-mono"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
