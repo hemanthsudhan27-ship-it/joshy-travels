@@ -1,15 +1,61 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Lock, ArrowLeft, AlertCircle } from "lucide-react";
-import { login } from "./actions";
+import { Lock, ArrowLeft, AlertCircle, Loader2 } from "lucide-react";
+import { createClient } from "@/utils/supabase/client";
 
 function LoginForm() {
   const searchParams = useSearchParams();
-  const error = searchParams.get("error");
+  const urlError = searchParams.get("error");
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(
+    urlError ? decodeURIComponent(urlError) : null
+  );
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !password) {
+      setErrorMsg("Please provide both your email address and password.");
+      return;
+    }
+
+    setLoading(true);
+    setErrorMsg(null);
+
+    try {
+      const supabase = createClient();
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password: password.trim(),
+      });
+
+      if (error) {
+        setErrorMsg(error.message || "Invalid email or password.");
+        setLoading(false);
+        return;
+      }
+
+      if (data?.user) {
+        // Authenticated successfully! Redirect to admin dashboard
+        window.location.href = "/admin";
+      } else {
+        setErrorMsg("Unable to start session. Please try again.");
+        setLoading(false);
+      }
+    } catch (err) {
+      console.error("Login client error:", err);
+      setErrorMsg(
+        err instanceof Error ? err.message : "Authentication service unavailable."
+      );
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="w-full max-w-md bg-zinc-950 border border-gold/40 rounded-3xl p-8 sm:p-10 shadow-2xl relative z-10 backdrop-blur-md">
@@ -41,19 +87,19 @@ function LoginForm() {
         <span>Secure Sign In</span>
       </div>
       <p className="text-xs text-white/60 mb-6 font-light leading-relaxed">
-        Authenticate to manage packages, client reviews, services, gallery photographs, and live page narratives.
+        Authenticate to manage packages, client enquiries, reviews, services, gallery photographs, and live page narratives.
       </p>
 
       {/* Error Notification */}
-      {error && (
+      {errorMsg && (
         <div className="mb-6 p-4 rounded-xl bg-red-950/40 border border-red-500/30 flex items-start gap-3 text-red-200 text-xs">
           <AlertCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
-          <span className="leading-relaxed">{decodeURIComponent(error)}</span>
+          <span className="leading-relaxed">{errorMsg}</span>
         </div>
       )}
 
       {/* Login Form */}
-      <form action={login} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5">
         {/* Email */}
         <div>
           <label className="block text-[11px] uppercase tracking-wider text-white/70 mb-2 font-medium">
@@ -61,10 +107,11 @@ function LoginForm() {
           </label>
           <input
             type="email"
-            name="email"
             required
             autoComplete="email"
-            placeholder="admin@jjtravels.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="admin@oneworldtravels.com"
             className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold transition-colors"
             autoFocus
           />
@@ -77,9 +124,10 @@ function LoginForm() {
           </label>
           <input
             type="password"
-            name="password"
             required
             autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••••••"
             className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold transition-colors"
           />
@@ -88,9 +136,17 @@ function LoginForm() {
         {/* Submit CTA */}
         <button
           type="submit"
-          className="w-full py-3.5 px-4 rounded-xl font-semibold text-sm text-black bg-gold hover:bg-white transition-colors duration-200 shadow-lg shadow-gold/20 flex items-center justify-center gap-2 cursor-pointer"
+          disabled={loading}
+          className="w-full py-3.5 px-4 rounded-xl font-semibold text-sm text-black bg-gold hover:bg-white transition-colors duration-200 shadow-lg shadow-gold/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
         >
-          <span>Sign In to Admin Console</span>
+          {loading ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin text-black" />
+              <span>Verifying Credentials...</span>
+            </>
+          ) : (
+            <span>Sign In to Admin Console</span>
+          )}
         </button>
       </form>
 

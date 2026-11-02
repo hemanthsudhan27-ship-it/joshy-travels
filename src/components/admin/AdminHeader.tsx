@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LogOut, ExternalLink, Home, Package, Star, Briefcase, Image as ImageIcon, Info, Inbox } from "lucide-react";
-import { logout } from "@/app/admin/login/actions";
+import { createClient } from "@/utils/supabase/client";
 
 export type AdminTab = "home" | "packages" | "reviews" | "services" | "gallery" | "about" | "enquiries";
 
@@ -23,6 +23,16 @@ const TABS: Array<{ id: AdminTab; label: string; icon: React.ElementType }> = [
 ];
 
 export default function AdminHeader({ activeTab, onTabChange }: AdminHeaderProps) {
+  const handleSignOut = async () => {
+    try {
+      const supabase = createClient();
+      await supabase.auth.signOut();
+    } catch (e) {
+      console.warn("Sign out error:", e);
+    }
+    window.location.href = "/admin/login";
+  };
+
   return (
     <header className="bg-zinc-950 border-b border-white/10 sticky top-0 z-40">
       <div className="max-w-[1500px] mx-auto px-4 sm:px-8 py-4">
@@ -61,15 +71,14 @@ export default function AdminHeader({ activeTab, onTabChange }: AdminHeaderProps
               <ExternalLink className="w-3.5 h-3.5" />
             </Link>
 
-            <form action={logout}>
-              <button
-                type="submit"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-red-950/30 border border-red-500/30 text-red-200 hover:bg-red-900/40 hover:text-white text-xs font-medium transition-colors cursor-pointer"
-              >
-                <LogOut className="w-3.5 h-3.5" />
-                <span>Sign Out</span>
-              </button>
-            </form>
+            <button
+              type="button"
+              onClick={handleSignOut}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-red-950/30 border border-red-500/30 text-red-200 hover:bg-red-900/40 hover:text-white text-xs font-medium transition-colors cursor-pointer"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>Sign Out</span>
+            </button>
           </div>
         </div>
 
