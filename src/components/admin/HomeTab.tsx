@@ -66,7 +66,11 @@ export default function HomeTab() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Failed to save homepage data");
+      const result = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        throw new Error(result?.error || `Failed to save homepage data (HTTP ${res.status})`);
+      }
       setStatus({ type: "success", text: "Homepage changes saved and committed to GitHub!" });
     } catch (err) {
       setStatus({ type: "error", text: err instanceof Error ? err.message : "Error saving changes" });
