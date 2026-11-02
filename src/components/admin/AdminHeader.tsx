@@ -98,3 +98,4 @@ export default function AdminHeader({ activeTab, onTabChange }: AdminHeaderProps
     </header>
   );
 }
+
