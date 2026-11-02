@@ -1,49 +1,28 @@
 import { Star, CheckCircle, Quote } from "lucide-react";
+import reviewsJson from "@/data/reviews.json";
 
-export interface TestimonialItem {
+export interface ReviewItem {
   id: string;
   author: string;
-  initials: string;
-  journeyType: string;
-  reviewText: string;
+  journey: string;
   rating: number;
-  highlightKicker: string;
+  quote: string;
+  location?: string;
+  date?: string;
+  verified?: boolean;
 }
 
-export const realReviews: TestimonialItem[] = [
-  {
-    id: "review-1",
-    author: "Sindhu Jeevesh",
-    initials: "SJ",
-    journeyType: "Luxury Stay & Sunset Balcony",
-    highlightKicker: "EXCELLENT COORDINATION AS USUAL",
-    reviewText:
-      "Overall a very good experience. Good ambience. Neat and clean luxury space. Experience a very beautiful sunset from the balcony. Very friendly crew. Beautiful interior. Bed rooms gives you a luxury hotel feeling. Thank you Joshi and team to give for an excellent cordination as usal.",
-    rating: 5,
-  },
-  {
-    id: "review-2",
-    author: "Ashwin Babu",
-    initials: "AB",
-    journeyType: "Hyderabad Heritage Tour",
-    highlightKicker: "METICULOUS PLANNING & CONSTANT SUPPORT",
-    reviewText:
-      "I recently completed a tour of Hyderabad with Joshy Tours and Travels, and it was an outstanding experience from start to finish. A special thanks to our travel agents, Joby and Akhil, for their meticulous planning and constant support throughout the trip. Everything—from the itinerary to the local transport—was handled seamlessly. They made sure we covered all the major landmarks like Charminar and Golconda Fort while also keeping the schedule comfortable. If you’re looking for a reliable agency that truly cares about its clients' experience, I highly recommend Joshy Tours. Looking forward to the next one.",
-    rating: 5,
-  },
-  {
-    id: "review-3",
-    author: "Dr. Lakshmi S Kumar",
-    initials: "LK",
-    journeyType: "Loyola Coorg Group Expedition",
-    highlightKicker: "RESPONSIBLE COORDINATION & SAFE STAYS",
-    reviewText:
-      "The Coorg trip for loyola 5th and 6th was really exciting and warming. The stay and food were safe .Also the site seeing were amazing . I would recommend your service with utmost care for all . The co-ordinators and teachers were very much responsible .Thank you so much.🙏🤩",
-    rating: 5,
-  },
-];
-
 export default function ReviewsList() {
+  const reviews: ReviewItem[] = reviewsJson as ReviewItem[];
+
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((part) => part[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
+  };
   return (
     <section className="relative z-10 bg-black py-20 sm:py-28 border-t border-white/10">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
@@ -60,9 +39,9 @@ export default function ReviewsList() {
           </h2>
         </div>
 
-        {/* 3 Prominent Editorial Testimonial Cards */}
+        {/* Testimonial Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10">
-          {realReviews.map((review) => (
+          {reviews.map((review) => (
             <div
               key={review.id}
               className="group relative p-8 sm:p-10 rounded-2xl bg-zinc-950/70 border border-white/10 hover:border-gold/50 shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between"
@@ -71,7 +50,7 @@ export default function ReviewsList() {
                 {/* Top Row: 5 Gold Stars & Quote Icon */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-1 text-gold">
-                    {[...Array(review.rating)].map((_, i) => (
+                    {[...Array(review.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                     ))}
                   </div>
@@ -79,14 +58,14 @@ export default function ReviewsList() {
                   <Quote className="w-8 h-8 text-gold/30 group-hover:text-gold/60 transition-colors duration-300" />
                 </div>
 
-                {/* Highlight Kicker */}
+                {/* Journey Kicker */}
                 <span className="text-[11px] font-semibold tracking-wider text-gold uppercase block mb-3">
-                  {review.highlightKicker}
+                  {review.journey}
                 </span>
 
                 {/* Review Paragraph */}
                 <p className="font-body text-base sm:text-lg text-white/85 leading-relaxed font-normal mb-8">
-                  &ldquo;{review.reviewText}&rdquo;
+                  &ldquo;{review.quote}&rdquo;
                 </p>
               </div>
 
@@ -95,7 +74,7 @@ export default function ReviewsList() {
                 <div className="flex items-center gap-4">
                   {/* Initials Avatar */}
                   <div className="w-12 h-12 rounded-full bg-black border border-gold/60 flex items-center justify-center font-display font-bold text-gold text-sm group-hover:bg-gold group-hover:text-black transition-all duration-300">
-                    {review.initials}
+                    {getInitials(review.author)}
                   </div>
 
                   <div>
@@ -103,16 +82,18 @@ export default function ReviewsList() {
                       {review.author}
                     </h3>
                     <p className="text-xs text-white/60 font-medium">
-                      {review.journeyType}
+                      {review.location || "Verified Guest"}
                     </p>
                   </div>
                 </div>
 
                 {/* Verified Traveller Badge */}
-                <div className="flex items-center gap-1.5 text-xs text-gold/90 font-medium shrink-0">
-                  <CheckCircle className="w-4 h-4 text-gold" />
-                  <span className="hidden sm:inline">Verified</span>
-                </div>
+                {review.verified !== false && (
+                  <div className="flex items-center gap-1.5 text-xs text-gold/90 font-medium shrink-0">
+                    <CheckCircle className="w-4 h-4 text-gold" />
+                    <span className="hidden sm:inline">Verified</span>
+                  </div>
+                )}
               </div>
             </div>
           ))}

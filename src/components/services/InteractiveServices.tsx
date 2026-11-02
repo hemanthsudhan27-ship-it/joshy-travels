@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import servicesJson from "@/data/services.json";
 
 export interface ServiceItem {
   id: string;
@@ -14,98 +15,7 @@ export interface ServiceItem {
   slug: string;
 }
 
-export const servicesData: ServiceItem[] = [
-  {
-    id: "domestic",
-    number: "01",
-    title: "Domestic Tour Packages",
-    category: "Curated Escapes",
-    description:
-      "Handcrafted journeys uncovering the most breathtaking domestic sanctuaries, cultural heritage destinations, and private retreats.",
-    image: "/images/packages/bali-hd.jpg",
-    slug: "domestic-tour-packages",
-  },
-  {
-    id: "international",
-    number: "02",
-    title: "International Tour Packages",
-    category: "Global Destinations",
-    description:
-      "Seamless worldwide holiday curations spanning Europe's alpine summits, Asian cultural capitals, and iconic desert metropolises.",
-    image: "/images/packages/switzerland-hd.jpg",
-    slug: "international-tour-packages",
-  },
-  {
-    id: "honeymoon",
-    number: "03",
-    title: "Honeymoon Packages",
-    category: "Romantic Journeys",
-    description:
-      "Intimate coastal villas, private sunset catamaran sails, and candlelit cliffside dinners curated for couples.",
-    image: "/images/about/amalfi-hd.jpg",
-    slug: "honeymoon-packages",
-  },
-  {
-    id: "family",
-    number: "04",
-    title: "Family Vacation Packages",
-    category: "Generational Travel",
-    description:
-      "Expansive private villas, child-friendly excursions, and seamless multi-generational planning with zero logistical stress.",
-    image: "/images/about/villa-hd.jpg",
-    slug: "family-vacation-packages",
-  },
-  {
-    id: "custom",
-    number: "05",
-    title: "Customized Travel Experiences",
-    category: "Bespoke Curation",
-    description:
-      "Tailor-made itineraries constructed from scratch around your personal pace, culinary desires, and private access requests.",
-    image: "/images/hero/hero-hd.jpg",
-    slug: "customized-travel-experiences",
-  },
-  {
-    id: "group",
-    number: "06",
-    title: "Group Tours",
-    category: "Guided Expeditions",
-    description:
-      "Carefully orchestrated private group travels, corporate retreats, and scenic rail expeditions with dedicated tour directors.",
-    image: "/images/about/about-viaduct-hd.jpg",
-    slug: "group-tours",
-  },
-  {
-    id: "flights",
-    number: "07",
-    title: "Flight Ticket Booking",
-    category: "Aviation & First-Class",
-    description:
-      "Premium cabin ticketing, preferred seat assignments, schedule optimization, and dedicated flight disruption assistance.",
-    image: "/images/services/flight-hd.jpg",
-    slug: "flight-ticket-booking",
-  },
-  {
-    id: "hotels",
-    number: "08",
-    title: "Hotel Reservations",
-    category: "5-Star Stays & Villas",
-    description:
-      "Preferred partner privileges, complimentary room upgrades where available, and vetted luxury accommodations worldwide.",
-    image: "/images/services/hotel-hd.jpg",
-    slug: "hotel-reservations",
-  },
-  {
-    id: "visa",
-    number: "09",
-    title: "Visa Assistance",
-    category: "Travel Clearance & Concierge",
-    description:
-      "Thorough documentation guidance, embassy appointment scheduling, and fast-track processing support for seamless border transit.",
-    image: "/images/services/visa-hd.jpg",
-    slug: "visa-assistance",
-  },
-];
+export const servicesData: ServiceItem[] = servicesJson.services as ServiceItem[];
 
 export default function InteractiveServices() {
   const [activeIndex, setActiveIndex] = useState<number>(0);

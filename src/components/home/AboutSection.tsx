@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import homeData from "@/data/home.json";
 
 export default function AboutSection() {
+  const { aboutSneak } = homeData;
+
   return (
     <section className="relative z-10 bg-black py-20 sm:py-28 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
@@ -10,7 +13,7 @@ export default function AboutSection() {
           {/* Left Narrative Column */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <span className="text-[11px] sm:text-[12px] tracking-[0.25em] uppercase font-semibold text-white/60 block mb-4">
-              ABOUT US
+              {aboutSneak.overline}
             </span>
 
             <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1] mb-6">
@@ -20,15 +23,15 @@ export default function AboutSection() {
             </h2>
 
             <p className="font-body text-base sm:text-lg text-white/75 leading-relaxed mb-8 max-w-lg font-normal">
-              We craft personalized journeys that bring people closer to the world — its places, cultures and experiences.
+              {aboutSneak.paragraph}
             </p>
 
             <div>
               <Link
-                href="/about"
+                href={aboutSneak.buttonHref || "/about"}
                 className="inline-flex items-center gap-2.5 text-gold font-medium text-base hover:text-white transition-colors duration-200 group"
               >
-                <span>Know More</span>
+                <span>{aboutSneak.buttonText}</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
               </Link>
             </div>
@@ -39,7 +42,7 @@ export default function AboutSection() {
             <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[480px] rounded-2xl lg:rounded-none overflow-hidden">
               <div className="w-full h-full relative lg:clip-diagonal overflow-hidden lg:rounded-r-2xl">
                 <Image
-                  src="/images/about/amalfi-hd.jpg"
+                  src={aboutSneak.image || "/images/about/amalfi-hd.jpg"}
                   alt="JJ Travels - Amalfi Coast Scenic Cliffside Drive"
                   fill
                   sizes="(max-width: 1024px) 100vw, 700px"

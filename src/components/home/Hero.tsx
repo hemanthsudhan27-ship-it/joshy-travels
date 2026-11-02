@@ -3,8 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import homeData from "@/data/home.json";
 
 export default function Hero() {
+  const { hero } = homeData;
+
   return (
     <section className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-between overflow-hidden bg-black pt-28 pb-16">
       {/* Background Photography with Depth Overlays */}
@@ -28,17 +31,17 @@ export default function Hero() {
           {/* Overline Kicker */}
           <div className="mb-6 flex items-center gap-3">
             <span className="text-[11px] sm:text-[13px] tracking-[0.28em] uppercase font-semibold text-white/90">
-              TRAVEL &nbsp;/&nbsp; EXPLORE &nbsp;/&nbsp; EXPERIENCE
+              {hero.overline}
             </span>
           </div>
 
           {/* Massive Display Headline */}
           <h1 className="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[1.04] uppercase text-white mb-6">
-            EXPLORE
+            {hero.titleLine1}
             <br />
-            THE WORLD
+            {hero.titleLine2}
             <br />
-            <span className="text-gold">WITH US</span>
+            <span className="text-gold">{hero.titleLine3}</span>
           </h1>
 
           {/* Supporting Narrative */}
@@ -49,10 +52,10 @@ export default function Hero() {
           {/* Primary Action Button */}
           <div>
             <Link
-              href="/packages"
+              href={hero.buttonHref || "/packages"}
               className="inline-flex items-center gap-3.5 px-8 py-4 rounded-full bg-gold text-black font-semibold text-sm sm:text-base tracking-wide hover:bg-[#ffe033] hover:shadow-[0_0_30px_rgba(255,215,0,0.35)] transition-all duration-300 group"
             >
-              <span>Explore Packages</span>
+              <span>{hero.buttonText}</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
             </Link>
           </div>

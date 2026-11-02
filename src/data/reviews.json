@@ -1,0 +1,33 @@
+[
+  {
+    "id": "review-1",
+    "author": "Sindhu Jeevesh",
+    "journey": "Luxury Suite & Sunset Experience",
+    "rating": 5,
+    "quote": "Overall a very good experience. Good ambience. Neat and clean luxury space. Experience a very beautiful sunset from the balcony. Very friendly crew. Beautiful interior. Bed rooms gives you a luxury hotel feeling. Thank you Joshi and team to give for an excellent cordination as usal.",
+    "location": "Kerala, India",
+    "date": "October 2026",
+    "verified": true
+  },
+  {
+    "id": "review-2",
+    "author": "Ashwin Babu",
+    "journey": "Hyderabad Tour & Heritage Package",
+    "rating": 5,
+    "quote": "I recently completed a tour of Hyderabad with Joshy Tours and Travels, and it was an outstanding experience from start to finish. A special thanks to our travel agents, Joby and Akhil, for their meticulous planning and constant support throughout the trip. Everything—from the itinerary to the local transport—was handled seamlessly. They made sure we covered all the major landmarks like Charminar and Golconda Fort while also keeping the schedule comfortable. If you're looking for a reliable agency that truly cares about its clients' experience, I highly recommend Joshy Tours. Looking forward to the next one.",
+    "location": "Kerala, India",
+    "date": "September 2026",
+    "verified": true
+  },
+  {
+    "id": "review-3",
+    "author": "Dr. Lakshmi S Kumar",
+    "journey": "Coorg Group Excursion (Loyola)",
+    "rating": 5,
+    "quote": "The Coorg trip for loyola 5th and 6th was really exciting and warming. The stay and food were safe. Also the site seeing were amazing. I would recommend your service with utmost care for all. The co-ordinators and teachers were very much responsible. Thank you so much. 🙏🤩",
+    "location": "Kerala, India",
+    "date": "August 2026",
+    "verified": true
+  }
+]
+

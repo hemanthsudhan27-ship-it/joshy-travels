@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "overline": "ABOUT JJ TRAVELS",
+    "titlePrefix": "THE PEOPLE BEHIND YOUR",
+    "titleAccent": "NEXT JOURNEY",
+    "description": "A travel company passionate about creating meaningful journeys, unforgettable experiences and stories that stay with you forever.",
+    "image": "/images/about/about-hero-hd.jpg"
+  },
+  "story": {
+    "overline": "OUR STORY",
+    "titlePrefix": "Driven by a Love for",
+    "titleAccent": "Travel",
+    "paragraph1": "JJ Travels was founded with a simple belief — travel changes the way we see the world. What began as a passion for exploration has grown into a trusted travel partner for individuals, families and groups across destinations worldwide.",
+    "paragraph2": "We believe luxury is not just five-star accommodations; it is the feeling of absolute freedom, effortless coordination, and arriving as welcome guests rather than mere tourists.",
+    "image": "/images/about/about-story-hd.jpg"
+  },
+  "journeyMilestones": [
+    {
+      "year": "2018",
+      "title": "The Founding Vision",
+      "description": "Established with a dedicated mission to craft authentic, transparent travel experiences that bypass mass-tourism clichés."
+    },
+    {
+      "year": "2020",
+      "title": "24/7 Concierge Pioneer",
+      "description": "Introduced direct WhatsApp-linked on-ground coordination with coordinators Joby & Akhil, ensuring every traveler has immediate real-time support."
+    },
+    {
+      "year": "2023",
+      "title": "Global Alpine & Mediterranean Expansion",
+      "description": "Partnered with premier chalets and private yacht fleets across Switzerland, Italy, Greece, and the UAE for exclusive client privileges."
+    },
+    {
+      "year": "2026",
+      "title": "Excellence in Bespoke Travel",
+      "description": "Recognized for uncompromising integrity and personalized travel curation, serving discerning individuals, families, and private groups worldwide."
+    }
+  ],
+  "coreValues": [
+    {
+      "number": "01",
+      "title": "Authentic Experiences",
+      "subtitle": "Integrity",
+      "description": "Real places, real people and real stories. We curate journeys that reveal the true culture, heritage, and atmosphere of each destination."
+    },
+    {
+      "number": "02",
+      "title": "Trust & Reliability",
+      "subtitle": "Transparency",
+      "description": "Transparent planning built on dependable assistance and meticulous attention to every single flight, transfer, and hotel booking."
+    },
+    {
+      "number": "03",
+      "title": "Personalized Plans",
+      "subtitle": "Individuality",
+      "description": "Every traveler is unique. We craft each itinerary around your individual pace, aesthetic tastes, and dream experiences."
+    },
+    {
+      "number": "04",
+      "title": "Quality Support",
+      "subtitle": "Dedication",
+      "description": "With you at every step of the journey. 24/7 proactive concierge care from departure through to your safe homecoming."
+    }
+  ],
+  "promise": {
+    "overline": "OUR PROMISE",
+    "titlePrefix": "Travel",
+    "titleAccent": "Better",
+    "description": "To bring you closer to the world with curated trips, seamless planning and experiences you'll always cherish.",
+    "buttonText": "Plan Your Trip",
+    "buttonHref": "/packages",
+    "image": "/images/about/about-viaduct-hd.jpg"
+  }
+}
+

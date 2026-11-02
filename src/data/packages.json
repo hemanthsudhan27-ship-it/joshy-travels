@@ -1,0 +1,757 @@
+[
+  {
+    "id": "switzerland",
+    "slug": "switzerland-explorer",
+    "title": "Switzerland Explorer",
+    "destination": "Zermatt, Interlaken & Zurich, Switzerland",
+    "duration": "7 Days / 6 Nights",
+    "category": "europe",
+    "categoryLabel": "Europe & Alps",
+    "price": "$3,450",
+    "priceDetail": "Starting per person based on twin sharing",
+    "heroImage": "/images/packages/switzerland-hd.jpg",
+    "galleryImages": [
+      "/images/packages/switzerland-hd.jpg",
+      "/images/about/about-viaduct-hd.jpg",
+      "/images/about/villa-hd.jpg"
+    ],
+    "overview": "Journey through the snow-capped majesty of the Swiss Alps. From the car-free mountain village of Zermatt in the shadow of the Matterhorn to the crystal-clear alpine waters of Lake Brienz and Zurich's cosmopolitan charm, this bespoke expedition balances first-class panoramic rail transit with intimate luxury chalet stays.",
+    "atmosphereQuote": "Where glacier breezes meet five-star alpine hospitality and the silence of the highest peaks.",
+    "bestTimeToVisit": "May to October (Alpine Trails) or Dec to April (Ski & Snow)",
+    "groupStyle": "Private & Tailored to Your Pace",
+    "accommodationType": "5-Star Heritage Chalets & Alpine Spa Resorts",
+    "transferType": "First Class Swiss Panoramic Rail & Private Mercedes V-Class",
+    "highlights": [
+      "Direct Matterhorn views from your private chalet balcony",
+      "First-Class panoramic ride aboard the iconic Glacier Express",
+      "Private yacht excursion across turquoise Lake Thun and Lake Brienz",
+      "Helicopter flight over Jungfraujoch & Aletsch Glacier (optional)",
+      "Curated fondue and wine pairing in a centuries-old cellar"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Zurich & First-Class Scenic Rail to Zermatt",
+        "location": "Zurich to Zermatt",
+        "description": "Upon arrival at Zurich Airport (ZRH), your JJ Travels representative greets you at the terminal and escorts your party to the first-class Swiss rail concourse. Board the scenic panoramic train winding through the Valais valley before reaching the car-free sanctuary of Zermatt.",
+        "morning": "VIP airport reception and private baggage porterage.",
+        "afternoon": "Ascend through the mountain valleys on the Matterhorn Gotthard Bahn.",
+        "evening": "Check into your private suite facing the Matterhorn followed by a welcome alpine dinner.",
+        "stay": "The Omnia Mountain Lodge or Grand Hotel Zermatterhof (5★)",
+        "meals": "Welcome Dinner with Swiss Vintage Pairings"
+      },
+      {
+        "day": 2,
+        "title": "Gornergrat Mountain Summit & Matterhorn Reflection Lakes",
+        "location": "Zermatt & Gornergrat (3,089m)",
+        "description": "Board the historic open-air cogwheel railway up to Gornergrat at 3,089 meters. Witness 29 four-thousand-meter peaks surrounding you. Embark on a gentle private downhill trail to the pristine Riffelsee where the Matterhorn mirrors flawlessly in still glacial waters.",
+        "morning": "Ascent on the Gornergrat Bahn with priority cabin seating.",
+        "afternoon": "Private picnic lunch prepared by your lodge on the alpine meadow.",
+        "evening": "Fireside thermal spa relaxation and five-course seasonal degustation.",
+        "stay": "The Omnia Mountain Lodge (5★)",
+        "meals": "Artisan Breakfast & 5-Course Dinner"
+      },
+      {
+        "day": 3,
+        "title": "Glacier Express Excellence Class to Andermatt",
+        "location": "Zermatt to Andermatt",
+        "description": "Board the world-famous Glacier Express in Excellence Class. Sink into handcrafted leather armchairs with guaranteed window seating, personal concierge service, and a five-course gourmet lunch paired with regional vintages as the train traverses 291 bridges and the Oberalp Pass.",
+        "morning": "Private transfer via electric horse carriage to Zermatt station.",
+        "afternoon": "Panoramic traverse across dramatic viaducts and gorges with sommelier service.",
+        "evening": "Arrival in the luxury alpine hub of Andermatt; check-in at The Chedi.",
+        "stay": "The Chedi Andermatt (5★ Luxury)",
+        "meals": "Breakfast & Glacier Express Gourmet Lunch"
+      },
+      {
+        "day": 4,
+        "title": "Interlaken Lakes, Lauterbrunnen Waterfalls & Jungfraujoch",
+        "location": "Andermatt to Lauterbrunnen & Interlaken",
+        "description": "Chauffeured transit into the Lauterbrunnen Valley of 72 waterfalls. Take the state-of-the-art Eiger Express tricable gondola to Jungfraujoch — the Top of Europe at 3,454m. Step onto the eternal ice and tour the mystical Ice Palace.",
+        "morning": "Scenic drive through alpine passes and Lauterbrunnen valley.",
+        "afternoon": "Jungfraujoch summit excursion with private mountain guide.",
+        "evening": "Sunset cruise on Lake Brienz aboard an exclusive private wooden speedboat.",
+        "stay": "Victoria-Jungfrau Grand Hotel & Spa (5★)",
+        "meals": "Full Alpine Breakfast & Lakeview Dinner"
+      },
+      {
+        "day": 5,
+        "title": "Lucerne & The Historic Chapel Bridge",
+        "location": "Interlaken to Lucerne",
+        "description": "Travel across the Brünig Pass to the medieval lakeside city of Lucerne. Stroll across the 14th-century wooden Chapel Bridge, explore the Old Town ramparts, and visit bespoke Swiss horology ateliers with an expert curator.",
+        "morning": "Panoramic lakeshore drive with photo stops at Giessbach Falls.",
+        "afternoon": "Private guided historical walk and Swiss watchmaker atelier tour.",
+        "evening": "Lakeside dining at a Michelin-recommended terrace in Lucerne.",
+        "stay": "Bürgenstock Hotel & Alpine Spa or Mandarin Oriental Palace (5★)",
+        "meals": "Breakfast & Chef Tasting Dinner"
+      },
+      {
+        "day": 6,
+        "title": "Zurich Old Town, Bahnhofstrasse & Lake Sunset",
+        "location": "Lucerne to Zurich",
+        "description": "Seamless morning transfer to Zurich. Check in at your historic lakeside hotel. Spend the afternoon exploring the vibrant Lindenhof district and premier boutiques along the world-renowned Bahnhofstrasse.",
+        "morning": "Private Mercedes transfer along Lake Zurich.",
+        "afternoon": "Private art tour through Kunsthaus Zurich or VIP shopping consultation.",
+        "evening": "Farewell champagne toast and gala dinner overlooking the Limmat River.",
+        "stay": "The Dolder Grand or Baur au Lac (5★ Superior)",
+        "meals": "Artisan Breakfast & Gala Dinner"
+      },
+      {
+        "day": 7,
+        "title": "Bespoke Departure Concierge",
+        "location": "Zurich Airport (ZRH)",
+        "description": "Enjoy a leisurely breakfast terrace overlooking the lake. Your private chauffeur transfers you to Zurich Airport with VIP fast-track security access arranged by JJ Travels.",
+        "morning": "Breakfast at leisure and optional last-minute Swiss chocolate tasting.",
+        "afternoon": "Private airport VIP transfer and homeward departure.",
+        "stay": "Departure Day",
+        "meals": "Artisan Breakfast"
+      }
+    ],
+    "inclusions": [
+      "6 Nights accommodation in handpicked 5-Star luxury chalets and historic palace hotels",
+      "Daily gourmet champagne breakfasts and 4 curated multi-course dinners",
+      "First-Class Swiss Travel Pass with seat reservations and Excellence Class Glacier Express",
+      "Private Mercedes V-Class chauffeur services for all road transits",
+      "Private boat charter across Lake Brienz / Lake Lucerne",
+      "All mountain railway and cable car permits including Gornergrat and Jungfraujoch",
+      "Dedicated 24/7 JJ Travels concierge coordinator on WhatsApp and phone",
+      "Full baggage handling and private airport VIP reception"
+    ],
+    "exclusions": [
+      "International flights (Can be seamlessly booked by our Flight Desk)",
+      "Discretionary gratuities for guides and chauffeurs",
+      "Travel insurance coverage (Comprehensive policies available upon request)",
+      "Personal boutique expenses and incidental room charges"
+    ],
+    "accommodations": [
+      {
+        "name": "The Chedi Andermatt",
+        "type": "5-Star Ultra-Luxury Alpine Resort",
+        "rating": "5.0 ★ Leading Hotels of the World",
+        "location": "Andermatt, Switzerland",
+        "image": "/images/about/villa-hd.jpg",
+        "description": "Combining traditional Swiss alpine warmth with Asian serenity. Features bronze fireplaces, dark woods, an Olympic-length indoor pool, and a wine and cigar library.",
+        "amenities": [
+          "Heated Indoor & Outdoor Pools",
+          "Hydrothermal Spa Sanctuary",
+          "Michelin-Starred Dining",
+          "Private Ski Butler"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bali",
+    "slug": "bali-escape",
+    "title": "Bali Serenity Escape",
+    "destination": "Ubud & Nusa Dua, Indonesia",
+    "duration": "5 Days / 4 Nights",
+    "category": "tropical",
+    "categoryLabel": "Tropical & Islands",
+    "price": "$1,850",
+    "priceDetail": "Starting per person based on twin sharing",
+    "heroImage": "/images/packages/bali-hd.jpg",
+    "galleryImages": [
+      "/images/packages/bali-hd.jpg",
+      "/images/about/villa-hd.jpg",
+      "/images/hero/hero-hd.jpg"
+    ],
+    "overview": "Escape to the enchanting island of the gods. From the mist-draped rice terraces and spiritual temples of Ubud to the private cliffside beaches and tranquil azure waters of Nusa Dua, this handpicked itinerary is designed for travelers seeking rejuvenation, culture, and pure tropical barefoot luxury.",
+    "atmosphereQuote": "Frangipani aromas in the morning breeze, infinity pools overlooking emerald valleys, and timeless ocean horizons.",
+    "bestTimeToVisit": "April to October (Dry & Sunny Island Season)",
+    "groupStyle": "Private Couple or Family Journey",
+    "accommodationType": "Private Pool River Villas & 5-Star Oceanfront Suites",
+    "transferType": "Private Chauffeur-Driven Air-Conditioned Luxury Vehicle",
+    "highlights": [
+      "Exclusive sunrise view of the floating Ulun Danu Beratan Temple",
+      "Private pool villa with hanging valley views in Ubud",
+      "Private yacht day-sail to Nusa Penida's secret beaches",
+      "Authentic Balinese organic culinary class with a private chef",
+      "Sunset seafood banquet directly on the white sands of Jimbaran"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Denpasar & Private Scenic Transit to Ubud",
+        "location": "Denpasar to Ubud Rainforest",
+        "description": "Touch down at Ngurah Rai International Airport (DPS) where your personal chauffeur greets you with cold towels and fragrant jasmine leis. Journey into the lush highlands of Ubud and settle into your jungle pool sanctuary.",
+        "morning": "VIP immigration assistance and airport greeting.",
+        "afternoon": "Check in at your riverside pool villa; rest and refresh.",
+        "evening": "Welcome Balinese herbal blessing ceremony and three-course dinner.",
+        "stay": "Mandapa, a Ritz-Carlton Reserve or Viceroy Bali (5★)",
+        "meals": "Welcome Dinner with Island Spices"
+      },
+      {
+        "day": 2,
+        "title": "Tegallalang Terraces, Tirta Empul & Private Chef Experience",
+        "location": "Ubud Cultural Highlands",
+        "description": "Early morning access to Tegallalang rice terraces before the crowds. Receive a traditional water purification blessing at the holy springs of Tirta Empul with an authorized local guide.",
+        "morning": "Sunrise stroll along emerald paddy walks and swing photo stop.",
+        "afternoon": "Organic farm tour and cooking masterclass with village elders.",
+        "evening": "Relaxing 90-minute Balinese deep tissue massage in your villa.",
+        "stay": "Mandapa, a Ritz-Carlton Reserve (5★)",
+        "meals": "Artisan Breakfast & Harvest Lunch"
+      },
+      {
+        "day": 3,
+        "title": "Ulun Danu Beratan & Transfer to Nusa Dua Coastline",
+        "location": "Bedugul to Nusa Dua Beach",
+        "description": "Witness the famous 17th-century water temple Pura Ulun Danu Beratan on Lake Beratan, followed by an afternoon scenic drive south to the white powder sands of Nusa Dua.",
+        "morning": "Highland lake drive and lakeside temple exploration.",
+        "afternoon": "Oceanfront check-in at your Nusa Dua resort with private beach access.",
+        "evening": "Beachside cocktail reception and dinner under the stars.",
+        "stay": "The St. Regis Bali Resort or The Mulia (5★ Oceanfront)",
+        "meals": "Breakfast & Coastal Seafood Feast"
+      },
+      {
+        "day": 4,
+        "title": "Private Catamaran Cruise to Nusa Penida",
+        "location": "Nusa Dua & Nusa Penida Island",
+        "description": "Step aboard a private 45-foot catamaran for a full-day cruise across the Badung Strait. Snorkel in crystal clear waters with manta rays at Manta Bay and relax on secluded coves.",
+        "morning": "Yacht embarkation with champagne and tropical fruits.",
+        "afternoon": "Snorkeling, paddle-boarding, and gourmet onboard lunch.",
+        "evening": "Sunset return to Nusa Dua followed by free evening at leisure.",
+        "stay": "The St. Regis Bali Resort (5★ Oceanfront)",
+        "meals": "Breakfast & Yacht Chef Lunch"
+      },
+      {
+        "day": 5,
+        "title": "Uluwatu Sunset Temple & Farewell Departure",
+        "location": "Uluwatu to Airport",
+        "description": "Spend your final morning swimming and enjoying spa treatments. In the afternoon, visit the dramatic clifftop temple of Uluwatu before your private chauffeur transfers you to Denpasar Airport for your onward flight.",
+        "morning": "Leisurely beach walk and resort breakfast buffet.",
+        "afternoon": "Clifftop panoramic views at Uluwatu; airport transfer.",
+        "stay": "Departure Day",
+        "meals": "Gourmet Breakfast"
+      }
+    ],
+    "inclusions": [
+      "4 Nights accommodation in 5★ luxury private pool villas and ocean suites",
+      "Daily gourmet breakfasts and 3 specially arranged multi-course dinners",
+      "Private air-conditioned vehicle with dedicated English-speaking driver",
+      "Full-day private catamaran sailing to Nusa Penida with snorkeling gear",
+      "All temple permits, entrance fees, and traditional sarong rentals",
+      "Traditional 90-minute Balinese massage therapy",
+      "Direct 24/7 WhatsApp concierge coordination with JJ Travels team"
+    ],
+    "exclusions": [
+      "International flights (Available on request through our flight booking desk)",
+      "Visa on Arrival fee ($35 USD payable at airport)",
+      "Personal alcoholic beverages not specified in meal plan",
+      "Gratuities for drivers and crew"
+    ],
+    "accommodations": [
+      {
+        "name": "The St. Regis Bali Resort",
+        "type": "5-Star Ultra-Luxury Oceanfront Resort",
+        "rating": "5.0 ★ Condé Nast Traveler Gold List",
+        "location": "Nusa Dua, Bali",
+        "image": "/images/packages/bali-hd.jpg",
+        "description": "Nestled on the premier white sands of Nusa Dua with a 9,288-square-meter saltwater lagoon, dedicated round-the-clock St. Regis Butler Service, and world-class culinary experiences.",
+        "amenities": [
+          "Private White Sand Beach",
+          "Saltwater Swimming Lagoon",
+          "24-Hour Butler Service",
+          "Iridium Hydrotherapy Spa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dubai",
+    "slug": "dubai-getaway",
+    "title": "Dubai Luxury Getaway",
+    "destination": "Dubai & Arabian Desert, UAE",
+    "duration": "4 Days / 3 Nights",
+    "category": "middle-east",
+    "categoryLabel": "Middle East & Wonders",
+    "price": "$2,100",
+    "priceDetail": "Starting per person based on twin sharing",
+    "heroImage": "/images/packages/dubai-hd.jpg",
+    "galleryImages": [
+      "/images/packages/dubai-hd.jpg",
+      "/images/hero/hero-hd.jpg",
+      "/images/packages/bali-hd.jpg"
+    ],
+    "overview": "Experience Dubai's architectural wonders and Arabian heritage with utmost VIP privilege. From fast-track Burj Khalifa sky access and private mega-yacht marina cruising to sleeping under star-filled desert skies in an ultra-exclusive conservation reserve, this journey delivers modern Arabian opulence at its highest standard.",
+    "atmosphereQuote": "Golden desert dunes melting into futuristic skyline silhouettes crowned by the world's tallest spires.",
+    "bestTimeToVisit": "October to April (Pleasant Warm Winter Season)",
+    "groupStyle": "Private Executive or Romantic Getaway",
+    "accommodationType": "5-Star Downtown Palace Hotel & Luxury Desert Oasis Resort",
+    "transferType": "Private Mercedes S-Class Chauffeur & Luxury 4x4 Desert Transport",
+    "highlights": [
+      "Burj Khalifa Level 148 At The Top SKY VIP access with lounge service",
+      "Private sunset yacht charter cruising past Atlantis The Royal and Palm Jumeirah",
+      "Private vintage Land Rover safari through the Dubai Desert Conservation Reserve",
+      "Five-star private dune dining accompanied by classical oud performance",
+      "Exclusive shopping concierge and personal stylist session at Dubai Mall"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Dubai & Marina Sunset Yacht Cruise",
+        "location": "Dubai Marina & Downtown",
+        "description": "Touch down at Dubai International Airport (DXB) with VIP fast-track Marhaba escort. Transfer in a private Mercedes S-Class to your Downtown luxury suite. At golden hour, embark on a private 55-foot yacht sailing through Dubai Marina and around the Palm Jumeirah.",
+        "morning": "VIP Marhaba airport meet & assist.",
+        "afternoon": "Check-in at your Downtown hotel overlooking Burj Lake.",
+        "evening": "Private sunset yacht charter with canapés and sparkling drinks.",
+        "stay": "Address Downtown or Palace Downtown (5★)",
+        "meals": "Welcome Cocktail & Marina Canapés"
+      },
+      {
+        "day": 2,
+        "title": "Burj Khalifa SKY VIP, Dubai Mall & Museum of the Future",
+        "location": "Downtown Dubai",
+        "description": "Skip the general queues with priority elevator access to Level 148 of the Burj Khalifa. Enjoy Arabic dates and coffee in the luxury sky lounge. In the afternoon, tour the architecturally astonishing Museum of the Future.",
+        "morning": "At The Top SKY Level 148 VIP lounge experience.",
+        "afternoon": "Guided tour through the Museum of the Future.",
+        "evening": "Front-row dining at At.mosphere restaurant or Armani/Ristorante.",
+        "stay": "Palace Downtown (5★)",
+        "meals": "Artisan Breakfast & Chef Tasting Dinner"
+      },
+      {
+        "day": 3,
+        "title": "Al Maha Desert Conservation Reserve & Royal Dune Dinner",
+        "location": "Dubai Desert Conservation Reserve",
+        "description": "Depart the bustling metropolis for the serene sands of the Dubai Desert Conservation Reserve. Check in to your private tented suite with an infinity plunge pool gazing across roaming Arabian oryx and gazelles.",
+        "morning": "Scenic desert transfer in a luxury 4x4 vehicle.",
+        "afternoon": "Wildlife drive in a 1950s vintage open-top Land Rover.",
+        "evening": "Private candlelit silver-service dinner set atop secluded desert dunes.",
+        "stay": "Al Maha, a Luxury Collection Desert Resort & Spa (5★)",
+        "meals": "Breakfast, Lunch & Royal Dune Banquet"
+      },
+      {
+        "day": 4,
+        "title": "Sunrise Falconry & Departure",
+        "location": "Desert to Dubai Airport (DXB)",
+        "description": "Witness the ancient art of Bedouin falconry at dawn over the dunes. Enjoy a tranquil breakfast by your private pool before your chauffeur conveys you directly to Dubai Airport for departure.",
+        "morning": "Interactive sunrise falconry experience and champagne breakfast.",
+        "afternoon": "Private Mercedes airport transfer with fast-track check-in.",
+        "stay": "Departure Day",
+        "meals": "Full Desert Breakfast"
+      }
+    ],
+    "inclusions": [
+      "3 Nights luxury accommodation including 1 night at Al Maha Desert Oasis Resort",
+      "Daily gourmet breakfasts, 1 private yacht dinner, and 1 royal desert banquet",
+      "Private Mercedes S-Class transfers for all city transits",
+      "Burj Khalifa Level 148 VIP SKY access tickets",
+      "2-Hour private yacht charter with crew and refreshments",
+      "Private conservation desert safari with falconry demonstration",
+      "24/7 dedicated JJ Travels concierge coordinator"
+    ],
+    "exclusions": [
+      "International airfare (Bookable with our flights team)",
+      "UAE Tourist Visa (Can be arranged via our Visa Assistance desk)",
+      "Optional helicopter skyline tour",
+      "Tourism Dirham Fee (Approx. 20 AED/night paid directly to hotel)"
+    ],
+    "accommodations": [
+      {
+        "name": "Al Maha Desert Resort & Spa",
+        "type": "5-Star Ultra-Luxury Desert Conservation Oasis",
+        "rating": "5.0 ★ Luxury Collection",
+        "location": "Dubai Desert Conservation Reserve",
+        "image": "/images/packages/dubai-hd.jpg",
+        "description": "An authentic oasis secluded among the golden dunes. Features individual Bedouin-style suites, handcrafted Arabian antiquities, and individual temperature-controlled plunge pools overlooking desert wildlife.",
+        "amenities": [
+          "Private Heated Plunge Pools",
+          "Timeless Spa & Wellness",
+          "Desert Falconry & Horseback Safaris",
+          "Fine Dining Al Diwaan"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "amalfi",
+    "slug": "amalfi-coast-odyssey",
+    "title": "Amalfi Coast & Capri Odyssey",
+    "destination": "Positano, Amalfi & Capri, Italy",
+    "duration": "6 Days / 5 Nights",
+    "category": "honeymoon",
+    "categoryLabel": "Romantic & Honeymoon",
+    "price": "$3,800",
+    "priceDetail": "Starting per person based on twin sharing",
+    "heroImage": "/images/about/amalfi-hd.jpg",
+    "galleryImages": [
+      "/images/about/amalfi-hd.jpg",
+      "/images/about/villa-hd.jpg",
+      "/images/packages/santorini-hd.jpg"
+    ],
+    "overview": "Indulge in the world's most romantic coastal sanctuary. Clinging to vertical lemon-scented cliffs above the sapphire Tyrrhenian Sea, the Amalfi Coast and glamorous Isle of Capri combine timeless Italian dolce vita with cliffside Michelin dining and private Riva boat excursions.",
+    "atmosphereQuote": "Cliffside bougainvillea, crisp limoncello spritz, and the rhythmic lap of waves against legendary sea grottos.",
+    "bestTimeToVisit": "May to October (Glorious Mediterranean Summer & Autumn)",
+    "groupStyle": "Honeymoon & Romantic Couples",
+    "accommodationType": "5-Star Historic Cliffside Palazzos & Luxury Sea Suites",
+    "transferType": "Private Mercedes Minivan & Classic Italian Wooden Speedboats",
+    "highlights": [
+      "Private balcony looking straight over Positano's pastel cascades",
+      "Full-day private Riva yacht charter around Capri and the Blue Grotto",
+      "Walk the Path of the Gods with a private naturalist guide",
+      "Candlelit cliffside dining overlooking the Faraglioni sea stacks",
+      "Private vintage Fiat 500 scenic coast drive through Ravello"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Naples & Dramatic Cliffside Drive to Positano",
+        "location": "Naples to Positano",
+        "description": "Private greeting at Naples Airport (NAP) or Centrale Train Station. Your chauffeur drives you along the dramatic cliff roads of the Amalfi coastline, arriving in picturesque Positano.",
+        "morning": "Private Mercedes reception in Naples.",
+        "afternoon": "Check in at your cliffside palazzo suite overlooking the sea.",
+        "evening": "Aperitivo on your private terrace followed by fresh seafood pasta dinner.",
+        "stay": "Le Sirenuse or Villa Franca Positano (5★ Luxury)",
+        "meals": "Welcome Prosecco & Dinner"
+      },
+      {
+        "day": 2,
+        "title": "Positano Beaches, Boutiques & Ravello Cliff Gardens",
+        "location": "Positano & Ravello",
+        "description": "Explore Positano's narrow cobbled stairs and artisan linen boutiques before driving up to the tranquil hilltown of Ravello. Tour the hanging infinity gardens of Villa Cimbrone with panoramic views.",
+        "morning": "Leisurely Positano harbor walk and artisanal shopping.",
+        "afternoon": "Private transfer to Ravello; stroll through Villa Cimbrone & Villa Rufolo.",
+        "evening": "Limoncello tasting and dinner in Ravello's panoramic plaza.",
+        "stay": "Villa Franca Positano (5★)",
+        "meals": "Artisan Breakfast & Lunch"
+      },
+      {
+        "day": 3,
+        "title": "Private Wooden Gozzo Sail to Isle of Capri",
+        "location": "Positano to Capri Island",
+        "description": "Board a private 38-foot classic Italian wooden Gozzo boat with your private skipper. Cruise past the Li Galli islands to Capri. Swim in secluded coves, navigate through the Faraglioni arches, and explore Anacapri.",
+        "morning": "Board private boat at Positano pier with chilled prosecco.",
+        "afternoon": "Tender access to Capri port, chairlift to Monte Solaro, and Blue Grotto visit.",
+        "evening": "Sunset sail back to Positano as the cliffside lights begin to glow.",
+        "stay": "Villa Franca Positano (5★)",
+        "meals": "Breakfast & Onboard Capri Lunch"
+      },
+      {
+        "day": 4,
+        "title": "Path of the Gods Hike & Historic Amalfi Town",
+        "location": "Bomerano, Nocelle & Amalfi",
+        "description": "Hike the legendary 'Sentiero degli Dei' with breathtaking views suspended 500 meters between sky and sea. In the afternoon, visit the 9th-century Duomo di Sant'Andrea in Amalfi town.",
+        "morning": "Scenic guided morning hike along the cliffside crest.",
+        "afternoon": "Explore historic Amalfi town and taste traditional sfogliatella.",
+        "evening": "Michelin-starred cliffside dinner at Ristorante La Sponda.",
+        "stay": "Villa Franca Positano (5★)",
+        "meals": "Breakfast & Michelin-Star Dinner"
+      },
+      {
+        "day": 5,
+        "title": "Sorrento Coast & Lemon Grove Gastronomy",
+        "location": "Sorrento Peninsula",
+        "description": "Journey along the Sorrento peninsula to an authentic family-run citrus estate. Learn traditional mozzarella making, pick fresh Amalfi lemons, and dine on wood-fired Neapolitan pizza in the groves.",
+        "morning": "Sorrento peninsula drive and artisan leather workshops.",
+        "afternoon": "Private mozzarella and pizza masterclass under lemon trees.",
+        "evening": "Farewell sunset toast overlooking the Bay of Naples.",
+        "stay": "Villa Franca Positano (5★)",
+        "meals": "Breakfast & Rustic Garden Feast"
+      },
+      {
+        "day": 6,
+        "title": "Arrivederci Amalfi & Chauffeur to Naples",
+        "location": "Positano to Naples Airport",
+        "description": "Savor your final morning espresso on the terrace listening to the sea. Your private driver transfers you to Naples Airport for your flight home.",
+        "morning": "Terrace breakfast at leisure.",
+        "afternoon": "Private Mercedes transfer to Naples Airport (NAP).",
+        "stay": "Departure Day",
+        "meals": "Italian Breakfast"
+      }
+    ],
+    "inclusions": [
+      "5 Nights accommodation in 5★ cliffside luxury suites with sea views",
+      "Daily artisan Italian breakfasts and 3 specially curated regional dinners",
+      "Full-day private Gozzo boat charter to Capri with skipper and refreshments",
+      "Private Mercedes-Benz minivan chauffeur for all mainland travel",
+      "Private guided excursion to Ravello gardens and Path of the Gods",
+      "Mozzarella and organic lemon grove culinary experience",
+      "24/7 dedicated JJ Travels WhatsApp concierge support"
+    ],
+    "exclusions": [
+      "International flights (Can be arranged via JJ Travels flight desk)",
+      "City tourist taxes (Paid directly to hotel at checkout)",
+      "Personal shopping and souvenirs",
+      "Gratuities for boat skipper and private guides"
+    ],
+    "accommodations": [
+      {
+        "name": "Villa Franca Positano",
+        "type": "5-Star Boutique Cliffside Palace",
+        "rating": "5.0 ★ Small Luxury Hotels of the World",
+        "location": "Positano, Italy",
+        "image": "/images/about/amalfi-hd.jpg",
+        "description": "Perched at the highest peak of Positano, offering 360-degree views of the coastline, a rooftop plunge pool, Michelin-acclaimed cuisine, and modern Italian art.",
+        "amenities": [
+          "Panoramic Rooftop Plunge Pool",
+          "Michelin-Starred Li Galli Restaurant",
+          "Private Shuttles to Positano Beach",
+          "Osea Spa Sanctuary"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "santorini",
+    "slug": "santorini-caldera-haven",
+    "title": "Santorini Caldera Haven",
+    "destination": "Oia & Aegean Sea, Greece",
+    "duration": "5 Days / 4 Nights",
+    "category": "honeymoon",
+    "categoryLabel": "Romantic & Honeymoon",
+    "price": "$2,950",
+    "priceDetail": "Starting per person based on twin sharing",
+    "heroImage": "/images/packages/santorini-hd.jpg",
+    "galleryImages": [
+      "/images/packages/santorini-hd.jpg",
+      "/images/about/villa-hd.jpg",
+      "/images/about/amalfi-hd.jpg"
+    ],
+    "overview": "Perched on the volcanic rim of the legendary Aegean caldera, this Greek island sanctuary is tailored for unforgettable romance. Whitewashed cliff dwellings, private heated infinity plunge pools, world-renowned Oia sunsets, and private catamaran sailing across crystalline volcanic hot springs.",
+    "atmosphereQuote": "Cobalt domes glowing against golden Aegean sunsets and the timeless peace of ancient volcanic cliffs.",
+    "bestTimeToVisit": "April to October (Dry Aegean Sunshine & Warm Seas)",
+    "groupStyle": "Honeymooners & Couples",
+    "accommodationType": "5-Star Caldera Cave Suites with Private Heated Pools",
+    "transferType": "Private Luxury Airport Transfer & Catamaran Charters",
+    "highlights": [
+      "Private terrace with heated caldera plunge pool in Oia",
+      "Private sunset catamaran cruise with fresh seafood BBQ and Greek wine",
+      "Wine tasting tour through 3 heritage volcanic vineyards with sommelier",
+      "Guided sunset walk from Imerovigli to Oia along the caldera ridge",
+      "Helicopter transfer from Athens or private island hopping (optional)"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Santorini & Check-In to Your Cliffside Cave Suite",
+        "location": "Santorini Airport (JTR) to Oia",
+        "description": "Private airport reception upon arrival in Santorini. Journey to the iconic village of Oia. Check in to your sculpted cave suite featuring a private heated plunge pool perched hundreds of feet above the sea.",
+        "morning": "Private airport reception and porter service through Oia's steps.",
+        "afternoon": "Check in and unwind in your private cliffside pool.",
+        "evening": "Champagne sunset toast on your private terrace followed by caldera dining.",
+        "stay": "Canaves Oia Suites or Mystique, a Luxury Collection Hotel (5★)",
+        "meals": "Welcome Champagne & Dinner"
+      },
+      {
+        "day": 2,
+        "title": "Volcanic Vineyards & Megalochori Heritage Village",
+        "location": "Central & Southern Santorini",
+        "description": "Meet your private sommelier for a tour through Santorini's unique basket-woven Assyrtiko vineyards. Visit historic stone cellars, taste award-winning volcanic wines, and explore the peaceful medieval village of Megalochori.",
+        "morning": "Scenic drive through southern Santorini to traditional villages.",
+        "afternoon": "Private tasting of 8 volcanic wines paired with Cycladic cheeses.",
+        "evening": "Dinner overlooking the illuminated caldera in Imerovigli.",
+        "stay": "Canaves Oia Suites (5★)",
+        "meals": "Cycladic Breakfast & Vineyard Lunch"
+      },
+      {
+        "day": 3,
+        "title": "Private Catamaran Cruise across Volcanic Hot Springs",
+        "location": "Aegean Sea & Nea Kameni",
+        "description": "Board a luxury 50-foot catamaran for a semi-private or private sailing expedition. Swim in the thermal waters of the volcanic hot springs, snorkel at Red Beach and White Beach, and savor an Aegean seafood BBQ cooked on deck.",
+        "morning": "Embarkation at Ammoudi Bay with morning swim stops.",
+        "afternoon": "Snorkeling at White Beach and grilled lobster lunch on deck.",
+        "evening": "Anchor beneath Oia to watch the world's most celebrated sunset from the water.",
+        "stay": "Canaves Oia Suites (5★)",
+        "meals": "Breakfast & Catamaran Seafood BBQ"
+      },
+      {
+        "day": 4,
+        "title": "Akrotiri Prehistoric City & Red Beach Scenic Walk",
+        "location": "Akrotiri Peninsula",
+        "description": "Step into history with a private archaeologist guide through the preserved ruins of Akrotiri, the 'Minoan Pompeii' buried beneath volcanic ash in 1600 BC.",
+        "morning": "Guided tour through prehistoric Akrotiri excavations.",
+        "afternoon": "Relax on the black sand shores of Perivolos with private cabana access.",
+        "evening": "Farewell candlelight dinner in an ancient stone windmill restaurant.",
+        "stay": "Canaves Oia Suites (5★)",
+        "meals": "Breakfast & Farewell Dinner"
+      },
+      {
+        "day": 5,
+        "title": "Aegean Farewell & Chauffeur to Airport",
+        "location": "Oia to Santorini Airport (JTR)",
+        "description": "Enjoy a final morning taking in the panoramic views over a Greek breakfast of local honey, fresh figs, and Greek yogurt before your chauffeur whisks you to the airport.",
+        "morning": "Terrace breakfast overlooking the caldera.",
+        "afternoon": "Private airport transfer with expedited luggage assistance.",
+        "stay": "Departure Day",
+        "meals": "Cycladic Breakfast"
+      }
+    ],
+    "inclusions": [
+      "4 Nights in a 5★ luxury caldera cave suite with private heated plunge pool",
+      "Daily champagne breakfasts served on your private terrace",
+      "Private sunset catamaran cruise with seafood lunch and open bar",
+      "Private Mercedes-Benz transfers for all island journeys",
+      "Private sommelier-guided volcanic winery tour with tastings",
+      "Dedicated 24/7 JJ Travels WhatsApp concierge coordinator"
+    ],
+    "exclusions": [
+      "International and domestic flights (Bookable via JJ Travels flight desk)",
+      "Discretionary tips for catamaran crew and drivers",
+      "Personal spa treatments and premium wine purchases"
+    ],
+    "accommodations": [
+      {
+        "name": "Canaves Oia Suites",
+        "type": "5-Star Luxury Caldera Cave Resort",
+        "rating": "5.0 ★ Condé Nast Traveler Readers' Choice",
+        "location": "Oia, Santorini, Greece",
+        "image": "/images/packages/santorini-hd.jpg",
+        "description": "Carved directly into the cliffside with minimalist Cycladic white architecture, private infinity plunge pools, uninterrupted Aegean views, and exceptional Greek fine dining.",
+        "amenities": [
+          "Private Heated Plunge Pools",
+          "Infinity Edge Swimming Pool",
+          "Petra Fine Dining Restaurant",
+          "Private Motor Yacht Charters"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alpine-rail",
+    "slug": "alpine-scenic-rail",
+    "title": "Alpine Scenic Rail & St. Moritz",
+    "destination": "Graubünden & St. Moritz, Switzerland",
+    "duration": "8 Days / 7 Nights",
+    "category": "europe",
+    "categoryLabel": "Europe & Alps",
+    "price": "$4,200",
+    "priceDetail": "Starting per person based on twin sharing",
+    "heroImage": "/images/about/about-viaduct-hd.jpg",
+    "galleryImages": [
+      "/images/about/about-viaduct-hd.jpg",
+      "/images/packages/switzerland-hd.jpg",
+      "/images/about/villa-hd.jpg"
+    ],
+    "overview": "A grand journey across Switzerland's UNESCO World Heritage rail lines. Cross the monumental Landwasser and Solis viaducts aboard vintage panorama trains, traverse the Bernina Pass into Italian palm valleys, and stay in legendary palace hotels in St. Moritz and Pontresina.",
+    "atmosphereQuote": "Engineering brilliance meeting dramatic alpine gorges and the legendary glamour of St. Moritz.",
+    "bestTimeToVisit": "Year-Round (Winter Wonderland Dec–Apr, Alpine Bloom Jun–Oct)",
+    "groupStyle": "Private & Heritage Enthusiasts",
+    "accommodationType": "5-Star Historic Palace Hotels & Grand Heritage Lodges",
+    "transferType": "First Class UNESCO Panoramic Rail & Chauffeur Concierge",
+    "highlights": [
+      "Traverse the UNESCO World Heritage Albula and Bernina rail lines",
+      "First-Class panoramic carriages over the 65-meter Landwasser Viaduct",
+      "3 Nights at the legendary Badrutt's Palace Hotel in St. Moritz",
+      "Private horse-drawn carriage ride through Val Fex pine forests",
+      "Thermal mineral wellness baths nestled amidst snow-capped peaks"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Zurich & Bernina Express to Chur",
+        "location": "Zurich to Chur",
+        "description": "Arrive in Zurich and board your first-class rail connection to Chur, Switzerland's oldest city. Settle into a boutique heritage hotel and explore medieval cobbled alleys.",
+        "morning": "VIP Zurich Airport greeting and rail escort.",
+        "afternoon": "Scenic rail along Lake Zurich and Lake Walen to Chur.",
+        "evening": "Welcome dinner in a 500-year-old guild hall.",
+        "stay": "Romantik Hotel Stern Chur (4★ Superior)",
+        "meals": "Welcome Dinner with Graubünden Specialties"
+      },
+      {
+        "day": 2,
+        "title": "Crossing the Landwasser Viaduct to St. Moritz",
+        "location": "Chur to St. Moritz",
+        "description": "Board the iconic Rhätische Bahn in panoramic first class. Experience the breathtaking moment the train curves across the soaring arches of the Landwasser Viaduct into a sheer rock cliff tunnel.",
+        "morning": "Embark on the UNESCO Albula Railway route.",
+        "afternoon": "Arrival in St. Moritz; private carriage transfer to Badrutt's Palace.",
+        "evening": "Cocktails in the Grand Hall overlooking Lake St. Moritz.",
+        "stay": "Badrutt's Palace Hotel (5★ Palace)",
+        "meals": "Artisan Breakfast & Palace Dinner"
+      },
+      {
+        "day": 3,
+        "title": "Bernina Express Traverse across the Alps into Italy",
+        "location": "St. Moritz to Tirano, Italy",
+        "description": "The ultimate rail spectacle: climb past the Morteratsch Glacier to 2,253 meters at Ospizio Bernina before descending via the Brusio Circular Viaduct into the Italian vineyards of Tirano.",
+        "morning": "Bernina Express departure with private cabin service.",
+        "afternoon": "Authentic Valtellina pasta lunch in historic Tirano, Italy.",
+        "evening": "Return to St. Moritz in time for thermal spa relaxation.",
+        "stay": "Badrutt's Palace Hotel (5★ Palace)",
+        "meals": "Breakfast & Italian Vineyard Lunch"
+      },
+      {
+        "day": 4,
+        "title": "Horse-Drawn Carriage into Val Fex & High Alpine Tea",
+        "location": "Sils Maria & Val Fex",
+        "description": "Travel to the peaceful village of Sils Maria. Step into a private horse-drawn wooden carriage journeying deep into the protected, car-free alpine valley of Val Fex.",
+        "morning": "Lake Sils scenic promenade.",
+        "afternoon": "Carriage ride into Val Fex with private alpine picnic.",
+        "evening": "Fondue Chinoise and Swiss wines in a mountain lodge.",
+        "stay": "Badrutt's Palace Hotel (5★ Palace)",
+        "meals": "Breakfast & Alpine Picnic"
+      },
+      {
+        "day": 5,
+        "title": "Muottas Muragl Sunset Funicular & Stargazing",
+        "location": "Muottas Muragl (2,456m)",
+        "description": "Ride the century-old funicular railway up to Muottas Muragl for the most acclaimed panorama of the Upper Engadin lake plateau at sunset.",
+        "morning": "Leisure morning in St. Moritz boutiques and mineral baths.",
+        "afternoon": "Ascend Muottas Muragl with private panoramic hike.",
+        "evening": "Sunset dinner at the summit restaurant with views of the valley lights.",
+        "stay": "Grand Hotel Kronenhof Pontresina (5★ Luxury)",
+        "meals": "Breakfast & Summit Sunset Dinner"
+      },
+      {
+        "day": 6,
+        "title": "Thermal Spas of Pontresina & Glacier Views",
+        "location": "Pontresina",
+        "description": "A day dedicated to restorative alpine wellness. Indulge in hydrotherapy baths, saltwater grottoes, and mineral pools overlooking ancient pine forests.",
+        "morning": "Morning yoga and hydrotherapy spa treatment.",
+        "afternoon": "Walk to the foot of the Morteratsch Glacier trail.",
+        "evening": "Five-course Grand Restaurant gala dining.",
+        "stay": "Grand Hotel Kronenhof Pontresina (5★ Luxury)",
+        "meals": "Breakfast & Gala Dinner"
+      },
+      {
+        "day": 7,
+        "title": "Glacier Express to Andermatt & Lucerne",
+        "location": "Pontresina to Lucerne",
+        "description": "Embark on the legendary Glacier Express through the Rhine Gorge ('The Swiss Grand Canyon') before connecting to Lucerne for your final celebration night.",
+        "morning": "Scenic gorge traverse aboard the Glacier Express.",
+        "afternoon": "Check-in at your Lucerne lakeside palace hotel.",
+        "evening": "Farewell champagne dinner overlooking the Chapel Bridge.",
+        "stay": "Mandarin Oriental Palace, Lucerne (5★)",
+        "meals": "Breakfast & Farewell Dinner"
+      },
+      {
+        "day": 8,
+        "title": "Farewell Switzerland & Chauffeur to Zurich",
+        "location": "Lucerne to Zurich Airport (ZRH)",
+        "description": "Conclude your grand Swiss railway expedition with a private transfer along Lake Zurich directly to Zurich Airport for your flight.",
+        "morning": "Leisurely breakfast on the lake terrace.",
+        "afternoon": "Private Mercedes VIP transfer to Zurich Airport.",
+        "stay": "Departure Day",
+        "meals": "Artisan Breakfast"
+      }
+    ],
+    "inclusions": [
+      "7 Nights accommodation in 5★ Swiss Palace and Grand Historic Hotels",
+      "Daily gourmet breakfasts and 5 curated multi-course fine dining meals",
+      "First-Class 8-Day Swiss Rail Pass covering all UNESCO Albula & Bernina routes",
+      "Reserved panoramic seats on the Bernina Express and Glacier Express",
+      "Private horse-drawn carriage excursion through Val Fex",
+      "All funicular and mountain railway tickets including Muottas Muragl",
+      "24/7 dedicated JJ Travels concierge coordinator"
+    ],
+    "exclusions": [
+      "International flights (Can be booked by JJ Travels flight desk)",
+      "Discretionary personal expenses and Swiss watch purchases",
+      "Spa massage treatments not specifically listed in inclusions"
+    ],
+    "accommodations": [
+      {
+        "name": "Badrutt's Palace Hotel",
+        "type": "5-Star Historic Grand Palace",
+        "rating": "5.0 ★ Leading Hotels of the World",
+        "location": "St. Moritz, Switzerland",
+        "image": "/images/about/about-viaduct-hd.jpg",
+        "description": "An icon of legendary alpine hospitality since 1896. Perched over Lake St. Moritz with Gothic revival towers, celebrity guest pedigree, Palace Spa, and world-class service.",
+        "amenities": [
+          "Indoor Infinity Pool & Outdoor Whirlpool",
+          "Palace Wellness Spa & Sauna Complex",
+          "9 World-Class Restaurants & Bars",
+          "Private Ski Shuttle & Rolls-Royce Transfers"
+        ]
+      }
+    ]
+  }
+]
