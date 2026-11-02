@@ -1,49 +1,62 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server'
+import { readJsonData, saveJsonData } from '@/lib/github'
+import defaultEnquiries from '@/data/enquiries.json'
+import type { Enquiry } from '@/types/enquiry'
 
+const FILE_PATH = 'src/data/enquiries.json'
+
+// Public POST endpoint to record a new client enquiry
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { fullName, phone, email, service, travelDates, travelersCount, message } = body;
+    const body = await request.json()
+    const { name, phone, email, destination, packageSlug, adults, children, preferredDate, message } = body
 
-    // Basic validation
-    if (!fullName || !phone || !email) {
+    if (!name || !phone || !destination) {
       return NextResponse.json(
-        { error: "Name, phone, and email are required fields." },
+        { error: 'Name, phone number, and destination are required fields.' },
         { status: 400 }
-      );
+      )
     }
 
-    // Generate unique reference number
-    const timestamp = Date.now().toString().slice(-4);
-    const random = Math.floor(1000 + Math.random() * 9000);
-    const referenceId = `JJ-${timestamp}-${random}`;
+    const newEnquiry: Enquiry = {
+      id: `enq-${Date.now()}`,
+      createdAt: new Date().toISOString(),
+      name: String(name).trim(),
+      phone: String(phone).trim(),
+      email: email ? String(email).trim() : undefined,
+      destination: String(destination).trim(),
+      packageSlug: packageSlug ? String(packageSlug).trim() : undefined,
+      adults: adults ? String(adults) : '2',
+      children: children ? String(children) : '0',
+      preferredDate: preferredDate ? String(preferredDate) : '',
+      message: message ? String(message).trim() : undefined,
+      status: 'pending',
+    }
 
-    // Log the enquiry on the server console (will connect to Prisma in Phase 4)
-    console.log(`[ENQUIRY RECEIVED] Ref: ${referenceId}`, {
-      fullName,
-      phone,
-      email,
-      service,
-      travelDates,
-      travelersCount,
-      message,
-      receivedAt: new Date().toISOString(),
-    });
+    const currentList = await readJsonData<Enquiry[]>(FILE_PATH, defaultEnquiries as Enquiry[])
+    const updatedList = [newEnquiry, ...currentList]
+
+    // Save locally and commit to GitHub repository
+    await saveJsonData(
+      FILE_PATH,
+      updatedList,
+      `enquiry: new client ${newEnquiry.name} for ${newEnquiry.destination}`
+    )
 
     return NextResponse.json(
       {
         success: true,
-        referenceId,
-        message: "Enquiry successfully recorded. A travel coordinator will be in touch shortly.",
+        enquiry: newEnquiry,
+        id: newEnquiry.id,
+        message: 'Your enquiry has been successfully recorded.',
       },
       { status: 201 }
-    );
+    )
   } catch (error) {
-    console.error("[ENQUIRY ERROR]", error);
+    console.error('[ENQUIRY SUBMISSION ERROR]', error)
     return NextResponse.json(
-      { error: "Failed to process enquiry. Please try again or reach out directly on WhatsApp." },
+      { error: error instanceof Error ? error.message : 'Failed to record enquiry' },
       { status: 500 }
-    );
+    )
   }
 }
-

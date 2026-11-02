@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { MessageCircle, Calendar, ShieldCheck, PhoneCall, Sparkles } from "lucide-react";
 import { PackageDetail } from "@/data/packagesData";
-import PackageInquiryModal from "./PackageInquiryModal";
+import EnquiryModal from "@/components/common/EnquiryModal";
 
 interface PackageBookingWidgetProps {
   pkg: PackageDetail;
@@ -11,11 +11,6 @@ interface PackageBookingWidgetProps {
 
 export default function PackageBookingWidget({ pkg }: PackageBookingWidgetProps) {
   const [modalOpen, setModalOpen] = useState(false);
-
-  const whatsappMessage = encodeURIComponent(
-    `Hello JJ Travels! I am interested in booking or customizing the "${pkg.title}" (${pkg.duration}, starting ${pkg.price}). Please share available departure dates and details.`
-  );
-  const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 
   return (
     <>
@@ -44,39 +39,38 @@ export default function PackageBookingWidget({ pkg }: PackageBookingWidgetProps)
 
         {/* Action Buttons */}
         <div className="space-y-3 mb-6">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gold text-black font-semibold text-sm hover:bg-white transition-all duration-200 group"
+          <button
+            type="button"
+            onClick={() => setModalOpen(true)}
+            className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gold text-black font-semibold text-sm hover:bg-white transition-all duration-200 group cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 transition-transform group-hover:scale-110" />
             <span>Enquire on WhatsApp</span>
-          </a>
+          </button>
 
           <button
             type="button"
             onClick={() => setModalOpen(true)}
-            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-white/20 text-white font-medium text-sm hover:border-gold hover:text-gold transition-colors"
+            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-white/20 text-white font-medium text-sm hover:border-gold hover:text-gold transition-colors cursor-pointer"
           >
             <Calendar className="w-4 h-4 text-gold" />
-            <span>Request Custom Dates</span>
+            <span>Custom Itinerary Request</span>
           </button>
         </div>
 
-        {/* Trust Badges */}
-        <div className="space-y-2.5 pt-5 border-t border-white/10 text-xs text-white/70">
+        {/* Value Assurance Badges */}
+        <div className="space-y-3 pt-6 border-t border-white/10 text-xs text-white/70">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-4 h-4 text-gold shrink-0" />
-            <span>100% Tailored to Your Schedule</span>
-          </div>
-          <div className="flex items-center gap-2.5">
-            <Sparkles className="w-4 h-4 text-gold shrink-0" />
-            <span>Guaranteed 5★ Handpicked Stays</span>
+            <span>Transparent Pricing • Zero Hidden Surcharges</span>
           </div>
           <div className="flex items-center gap-2.5">
             <PhoneCall className="w-4 h-4 text-gold shrink-0" />
-            <span>Direct WhatsApp Concierge (Joby & Akhil)</span>
+            <span>Dedicated 24/7 WhatsApp Concierge</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <Sparkles className="w-4 h-4 text-gold shrink-0" />
+            <span>100% Tailored Private Itinerary Guarantee</span>
           </div>
         </div>
       </div>
@@ -94,30 +88,29 @@ export default function PackageBookingWidget({ pkg }: PackageBookingWidgetProps)
           <button
             type="button"
             onClick={() => setModalOpen(true)}
-            className="px-4 py-2.5 rounded-lg border border-white/20 text-white text-xs font-medium hover:border-gold"
+            className="px-4 py-2.5 rounded-lg border border-white/20 text-white text-xs font-medium hover:border-gold cursor-pointer"
           >
             Custom Quote
           </button>
 
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gold text-black text-xs font-bold hover:bg-white transition-colors"
+          <button
+            type="button"
+            onClick={() => setModalOpen(true)}
+            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gold text-black text-xs font-bold hover:bg-white transition-colors cursor-pointer"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>WhatsApp</span>
-          </a>
+          </button>
         </div>
       </div>
 
-      {/* Inquiry Modal */}
-      <PackageInquiryModal
-        pkg={pkg}
+      {/* Luxury Enquiry Modal */}
+      <EnquiryModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
+        defaultDestination={pkg.title}
+        packageSlug={pkg.slug}
       />
     </>
   );
 }
-

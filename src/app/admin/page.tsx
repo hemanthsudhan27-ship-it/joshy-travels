@@ -9,14 +9,15 @@ import ReviewsTab from '@/components/admin/ReviewsTab'
 import ServicesTab from '@/components/admin/ServicesTab'
 import GalleryTab from '@/components/admin/GalleryTab'
 import AboutTab from '@/components/admin/AboutTab'
+import EnquiriesTab from '@/components/admin/EnquiriesTab'
 
 function AdminDashboardContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const tabParam = searchParams.get('tab') as AdminTab | null
 
-  const validTabs: AdminTab[] = ['home', 'packages', 'reviews', 'services', 'gallery', 'about']
-  const initialTab: AdminTab = tabParam && validTabs.includes(tabParam) ? tabParam : 'home'
+  const validTabs: AdminTab[] = ['enquiries', 'home', 'packages', 'reviews', 'services', 'gallery', 'about']
+  const initialTab: AdminTab = tabParam && validTabs.includes(tabParam) ? tabParam : 'enquiries'
 
   const [activeTab, setActiveTab] = useState<AdminTab>(initialTab)
 
@@ -36,6 +37,7 @@ function AdminDashboardContent() {
       <AdminHeader activeTab={activeTab} onTabChange={handleTabChange} />
 
       <main className="flex-1 max-w-[1500px] w-full mx-auto px-4 sm:px-8 py-8 lg:py-10">
+        {activeTab === 'enquiries' && <EnquiriesTab />}
         {activeTab === 'home' && <HomeTab />}
         {activeTab === 'packages' && <PackagesTab />}
         {activeTab === 'reviews' && <ReviewsTab />}

@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { LogOut, ExternalLink, Home, Package, Star, Briefcase, Image as ImageIcon, Info } from "lucide-react";
+import { LogOut, ExternalLink, Home, Package, Star, Briefcase, Image as ImageIcon, Info, Inbox } from "lucide-react";
 import { logout } from "@/app/admin/login/actions";
 
-export type AdminTab = "home" | "packages" | "reviews" | "services" | "gallery" | "about";
+export type AdminTab = "home" | "packages" | "reviews" | "services" | "gallery" | "about" | "enquiries";
 
 interface AdminHeaderProps {
   activeTab: AdminTab;
@@ -13,6 +13,7 @@ interface AdminHeaderProps {
 }
 
 const TABS: Array<{ id: AdminTab; label: string; icon: React.ElementType }> = [
+  { id: "enquiries", label: "Client Enquiries", icon: Inbox },
   { id: "home", label: "Home Page", icon: Home },
   { id: "packages", label: "Tour Packages", icon: Package },
   { id: "reviews", label: "Client Reviews", icon: Star },
