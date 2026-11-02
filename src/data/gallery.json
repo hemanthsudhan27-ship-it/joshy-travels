@@ -1,16 +1,5 @@
 [
   {
-    "id": "gallery-1793636174280",
-    "title": "test",
-    "location": "test",
-    "category": "europe",
-    "categoryLabel": "Alps & Europe",
-    "image": "/images/gallery/1793636194402-img_5595.png",
-    "aspect": "standard",
-    "description": "",
-    "packageSlug": ""
-  },
-  {
     "id": "matterhorn-alpine",
     "title": "Matterhorn Reflections at Dawn",
     "location": "Zermatt, Swiss Alps",
