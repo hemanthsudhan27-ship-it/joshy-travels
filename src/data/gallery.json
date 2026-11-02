@@ -1,16 +1,5 @@
 [
   {
-    "id": "matterhorn-alpine",
-    "title": "Matterhorn Reflections at Dawn",
-    "location": "Zermatt, Swiss Alps",
-    "category": "europe",
-    "categoryLabel": "Alps & Europe",
-    "image": "/images/packages/switzerland-hd.jpg",
-    "aspect": "tall",
-    "description": "Golden dawn rays igniting the pyramid peak of the Matterhorn above the quiet village of Zermatt.",
-    "packageSlug": "switzerland-explorer"
-  },
-  {
     "id": "amalfi-cliffside",
     "title": "Cliffside Bougainvillea & Coastal Drive",
     "location": "Positano, Amalfi Coast, Italy",
