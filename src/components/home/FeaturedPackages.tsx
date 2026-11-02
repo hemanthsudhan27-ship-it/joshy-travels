@@ -1,44 +1,31 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-interface PackageCardData {
-  id: string;
-  slug: string;
-  title: string;
-  duration: string;
-  image: string;
-  alt: string;
-}
-
-const featuredPackages: PackageCardData[] = [
-  {
-    id: "bali",
-    slug: "bali-escape",
-    title: "Bali Escape",
-    duration: "5 Days / 4 Nights",
-    image: "/images/packages/bali-hd.jpg",
-    alt: "Bali Escape - Ulun Danu Beratan Water Temple",
-  },
-  {
-    id: "switzerland",
-    slug: "switzerland-explorer",
-    title: "Switzerland Explorer",
-    duration: "7 Days / 6 Nights",
-    image: "/images/packages/switzerland-hd.jpg",
-    alt: "Switzerland Explorer - Matterhorn Alpine Peak",
-  },
-  {
-    id: "dubai",
-    slug: "dubai-getaway",
-    title: "Dubai Getaway",
-    duration: "4 Days / 3 Nights",
-    image: "/images/packages/dubai-hd.jpg",
-    alt: "Dubai Getaway - Burj Khalifa and Skyline",
-  },
-];
+import { packagesData, type PackageDetail } from "@/data/packagesData";
 
 export default function FeaturedPackages() {
+  const [packages, setPackages] = useState<PackageDetail[]>(packagesData.slice(0, 3));
+
+  useEffect(() => {
+    async function loadFresh() {
+      try {
+        const res = await fetch("/api/admin/packages");
+        if (res.ok) {
+          const json = await res.json();
+          if (json.items && Array.isArray(json.items) && json.items.length > 0) {
+            setPackages(json.items.slice(0, 3));
+          }
+        }
+      } catch {
+        // Fallback
+      }
+    }
+    loadFresh();
+  }, []);
+
   return (
     <section className="relative z-10 bg-black py-20 sm:py-28">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
@@ -65,45 +52,48 @@ export default function FeaturedPackages() {
 
         {/* 3 Packages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {featuredPackages.map((pkg) => (
-            <Link
-              key={pkg.id}
-              href={`/packages/${pkg.slug}`}
-              className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-zinc-950 block shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* Background Photography */}
-              <Image
-                src={pkg.image}
-                alt={pkg.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 420px"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              />
+          {packages.map((pkg) => {
+            const displayImage = pkg.heroImage || (pkg as any).image || "/images/packages/switzerland-hd.jpg";
 
-              {/* Bottom Scrim for Text Contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+            return (
+              <Link
+                key={pkg.id}
+                href={`/packages/${pkg.slug}`}
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-zinc-950 block shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              >
+                {/* Background Photography */}
+                <Image
+                  src={displayImage}
+                  alt={pkg.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 420px"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-              {/* Bottom Card Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7 flex items-end justify-between z-10">
-                <div>
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-white group-hover:text-gold transition-colors duration-200">
-                    {pkg.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-white/70 font-medium mt-1">
-                    {pkg.duration}
-                  </p>
+                {/* Bottom Scrim for Text Contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+
+                {/* Bottom Card Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7 flex items-end justify-between z-10">
+                  <div>
+                    <h3 className="font-display font-bold text-xl sm:text-2xl text-white group-hover:text-gold transition-colors duration-200">
+                      {pkg.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-white/70 font-medium mt-1">
+                      {pkg.duration}
+                    </p>
+                  </div>
+
+                  {/* Circular Gold Arrow CTA */}
+                  <div className="w-10 h-10 rounded-full border border-gold/70 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black group-hover:border-gold transition-all duration-300 shrink-0 ml-3">
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                  </div>
                 </div>
-
-                {/* Circular Gold Arrow CTA */}
-                <div className="w-10 h-10 rounded-full border border-gold/70 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black group-hover:border-gold transition-all duration-300 shrink-0 ml-3">
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-                </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
-
