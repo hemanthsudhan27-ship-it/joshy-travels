@@ -27,3 +27,4 @@ jobs:
           else
             echo "Notice: Endpoints responded with REST: $REST_STATUS, Auth: $AUTH_STATUS"
           fi
+
