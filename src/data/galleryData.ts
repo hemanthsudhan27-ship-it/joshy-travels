@@ -1,0 +1,156 @@
+export interface GalleryItem {
+  id: string;
+  title: string;
+  location: string;
+  category: "all" | "europe" | "oceans" | "middle-east" | "stays";
+  categoryLabel: string;
+  image: string;
+  aspect: "standard" | "tall" | "wide";
+  description: string;
+  packageSlug?: string;
+}
+
+export const galleryData: GalleryItem[] = [
+  {
+    id: "matterhorn-alpine",
+    title: "Matterhorn Reflections at Dawn",
+    location: "Zermatt, Swiss Alps",
+    category: "europe",
+    categoryLabel: "Alps & Europe",
+    image: "/images/packages/switzerland-hd.jpg",
+    aspect: "tall",
+    description:
+      "Golden dawn rays igniting the pyramid peak of the Matterhorn above the quiet village of Zermatt.",
+    packageSlug: "switzerland-explorer",
+  },
+  {
+    id: "amalfi-cliffside",
+    title: "Cliffside Bougainvillea & Coastal Drive",
+    location: "Positano, Amalfi Coast, Italy",
+    category: "oceans",
+    categoryLabel: "Oceans & Coastal",
+    image: "/images/about/amalfi-hd.jpg",
+    aspect: "wide",
+    description:
+      "Pastel palazzos tumbling into the turquoise Tyrrhenian Sea along the dramatic cliff roads of Amalfi.",
+    packageSlug: "amalfi-coast-odyssey",
+  },
+  {
+    id: "dubai-skyline",
+    title: "Golden Hour Silhouette & Spire",
+    location: "Downtown Dubai, UAE",
+    category: "middle-east",
+    categoryLabel: "Middle East & Wonders",
+    image: "/images/packages/dubai-hd.jpg",
+    aspect: "standard",
+    description:
+      "Warm desert sunlight reflecting against the glass geometry of Burj Khalifa and the Dubai skyline.",
+    packageSlug: "dubai-getaway",
+  },
+  {
+    id: "santorini-caldera",
+    title: "Whitewashed Caldera Haven",
+    location: "Oia, Santorini, Greece",
+    category: "oceans",
+    categoryLabel: "Oceans & Coastal",
+    image: "/images/packages/santorini-hd.jpg",
+    aspect: "standard",
+    description:
+      "Infinity plunge pools perched on volcanic cliffs overlooking the blue Aegean Sea at dusk.",
+    packageSlug: "santorini-caldera-haven",
+  },
+  {
+    id: "viaduct-express",
+    title: "UNESCO Landwasser Viaduct Rail",
+    location: "Graubünden, Switzerland",
+    category: "europe",
+    categoryLabel: "Alps & Europe",
+    image: "/images/about/about-viaduct-hd.jpg",
+    aspect: "wide",
+    description:
+      "A scenic Swiss panorama train curving across monumental stone arches high above the alpine ravine.",
+    packageSlug: "alpine-scenic-rail",
+  },
+  {
+    id: "bali-temple",
+    title: "Sacred Mist of Lake Beratan",
+    location: "Bedugul, Bali, Indonesia",
+    category: "oceans",
+    categoryLabel: "Oceans & Coastal",
+    image: "/images/packages/bali-hd.jpg",
+    aspect: "tall",
+    description:
+      "The floating 17th-century Ulun Danu Beratan water temple shrouded in tranquil highland morning mist.",
+    packageSlug: "bali-escape",
+  },
+  {
+    id: "luxury-villa",
+    title: "Private Ocean Plunge Sanctuary",
+    location: "Positano, Italy",
+    category: "stays",
+    categoryLabel: "Luxury Stays & Stays",
+    image: "/images/about/villa-hd.jpg",
+    aspect: "wide",
+    description:
+      "Uninterrupted Mediterranean panoramas from a private heated infinity terrace at twilight.",
+    packageSlug: "amalfi-coast-odyssey",
+  },
+  {
+    id: "cinque-terre",
+    title: "Coastal Splendor of the Italian Riviera",
+    location: "Cinque Terre, Italy",
+    category: "oceans",
+    categoryLabel: "Oceans & Coastal",
+    image: "/images/about/about-story-hd.jpg",
+    aspect: "tall",
+    description:
+      "Vibrant terraced dwellings clinging to jagged rocky bluffs surrounded by the azure Ligurian Sea.",
+  },
+  {
+    id: "alpine-summit",
+    title: "Eternal Snow & Summit Horizon",
+    location: "Bernese Oberland, Switzerland",
+    category: "europe",
+    categoryLabel: "Alps & Europe",
+    image: "/images/about/about-hero-hd.jpg",
+    aspect: "standard",
+    description:
+      "Sunset glow illuminating the sharp granite ridges and eternal icefields of the highest Swiss summits.",
+    packageSlug: "switzerland-explorer",
+  },
+  {
+    id: "presidential-suite",
+    title: "Five-Star Suite Horizon",
+    location: "Handpicked Luxury Partner Stays",
+    category: "stays",
+    categoryLabel: "Luxury Stays & Stays",
+    image: "/images/services/hotel-hd.jpg",
+    aspect: "standard",
+    description:
+      "Bespoke interiors, floor-to-ceiling panoramic glass, and private terrace lounges curated for our guests.",
+  },
+  {
+    id: "aviation-sunset",
+    title: "Golden Hour Above the Clouds",
+    location: "International Skies",
+    category: "stays",
+    categoryLabel: "Luxury Stays & Aviation",
+    image: "/images/services/flight-hd.jpg",
+    aspect: "tall",
+    description:
+      "First-class cabin transit bathed in sunset amber, taking travelers effortlessly to their next dream destination.",
+  },
+  {
+    id: "mountain-panorama",
+    title: "Swiss Alpine Sunset Ridge",
+    location: "Valais Valley, Switzerland",
+    category: "europe",
+    categoryLabel: "Alps & Europe",
+    image: "/images/hero/hero-hd.jpg",
+    aspect: "wide",
+    description:
+      "The vast silence and majesty of evening settling over snow-capped peaks and valleys.",
+    packageSlug: "switzerland-explorer",
+  },
+];
+
