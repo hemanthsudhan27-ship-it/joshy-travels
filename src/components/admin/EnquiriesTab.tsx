@@ -165,7 +165,7 @@ export default function EnquiriesTab() {
   const buildClientWhatsAppUrl = (enquiry: Enquiry) => {
     const cleanNum = cleanPhoneForWhatsApp(enquiry.phone);
     const msg = encodeURIComponent(
-      `Hello ${enquiry.name}! This is JJ Travels following up on your enquiry for the ${enquiry.destination} package. How can we assist you with your personalized holiday arrangements?`
+      `Hello ${enquiry.name}! This is Joshy Travels following up on your enquiry for the ${enquiry.destination} package. How can we assist you with your personalized holiday arrangements?`
     );
     return `https://wa.me/${cleanNum}?text=${msg}`;
   };

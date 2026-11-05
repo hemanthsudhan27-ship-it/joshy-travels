@@ -55,3 +55,4 @@ export default function ChatInput({ value, onChange, onSend, disabled }: ChatInp
     </div>
   );
 }
+

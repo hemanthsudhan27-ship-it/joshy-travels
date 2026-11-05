@@ -7,9 +7,9 @@ import ContactForm from "@/components/contact/ContactForm";
 import ContactFAQ from "@/components/contact/ContactFAQ";
 
 export const metadata: Metadata = {
-  title: "Contact Us | JJ Travels — Bespoke Journeys & Concierge Coordination",
+  title: "Contact Us | Joshy Travels — Bespoke Journeys & Concierge Coordination",
   description:
-    "Get in touch with JJ Travels (Joshy Tours & Travels). Direct WhatsApp concierge with our coordinators Joby, Akhil, and team for bespoke tour packages, flights, hotels, and visa assistance.",
+    "Get in touch with Joshy Travels (Joshy Tours & Travels). Direct WhatsApp concierge with our coordinators Joby, Akhil, and team for bespoke tour packages, flights, hotels, and visa assistance.",
 };
 
 export default function ContactPage() {

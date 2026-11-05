@@ -30,7 +30,7 @@ export default function BrandStory() {
 
             <div className="space-y-6 text-white/80 font-body text-base sm:text-lg leading-relaxed">
               <p>
-                Founded on the belief that travel should be as unique as the traveller, JJ Travels designs bespoke global experiences tailored to your personal rhythm and passions.
+                Founded on the belief that travel should be as unique as the traveller, Joshy Travels designs bespoke global experiences tailored to your personal rhythm and passions.
               </p>
               <p className="text-white/70">
                 Whether it is securing exclusive private villas overlooking the Amalfi Coast, curating private access to alpine sanctuaries in Switzerland, or coordinating discreet VIP transfers across Dubai, our mission is seamless elegance at every touchpoint.
@@ -60,7 +60,7 @@ export default function BrandStory() {
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-zinc-950 shadow-2xl border border-white/10">
               <Image
                 src="/images/about/villa-hd.jpg"
-                alt="JJ Travels - Private Luxury Villa Sanctuary"
+                alt="Joshy Travels - Private Luxury Villa Sanctuary"
                 fill
                 sizes="(max-width: 1024px) 100vw, 650px"
                 className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"

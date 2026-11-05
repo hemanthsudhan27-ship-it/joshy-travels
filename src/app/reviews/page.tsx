@@ -7,9 +7,9 @@ import ReviewsTrustStrip from "@/components/reviews/ReviewsTrustStrip";
 import ReviewsCTA from "@/components/reviews/ReviewsCTA";
 
 export const metadata: Metadata = {
-  title: "Client Reviews & Testimonials | JJ Travels",
+  title: "Client Reviews & Testimonials | Joshy Travels",
   description:
-    "Read authentic reviews and verified feedback from travellers who have journeyed with Joshy Tours & Travels (JJ Travels).",
+    "Read authentic reviews and verified feedback from travellers who have journeyed with Joshy Tours & Travels (Joshy Travels).",
 };
 
 export default function ReviewsPage() {

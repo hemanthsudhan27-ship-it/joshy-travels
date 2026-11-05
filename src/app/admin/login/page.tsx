@@ -64,7 +64,7 @@ function LoginForm() {
         <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-gold/50">
           <Image
             src="/images/logo.png"
-            alt="JJ Travels"
+            alt="Joshy Travels"
             width={48}
             height={48}
             priority
@@ -73,7 +73,7 @@ function LoginForm() {
         </div>
         <div>
           <h1 className="font-heading text-xl font-bold text-white tracking-tight">
-            JJ Travels Admin
+            Joshy Travels Admin
           </h1>
           <span className="text-[11px] uppercase tracking-wider text-gold font-semibold block">
             Content Management Console
@@ -159,7 +159,7 @@ function LoginForm() {
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Return to Website</span>
         </Link>
-        <span className="text-[11px] text-white/40 font-mono">JJ Travels</span>
+        <span className="text-[11px] text-white/40 font-mono">Joshy Travels</span>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero/hero-hd.jpg"
-          alt="Explore the World with JJ Travels - Mountain Sunset"
+          alt="Explore the World with Joshy Travels - Mountain Sunset"
           fill
           priority
           className="object-cover object-right md:object-center opacity-85 scale-100 transition-transform duration-1000 ease-out"

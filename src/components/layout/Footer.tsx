@@ -8,7 +8,7 @@ interface FooterProps {
 
 export default function Footer({ variant = "default" }: FooterProps) {
   const whatsappMessage = encodeURIComponent(
-    "Hello JJ Travels, I would like to plan my next journey with you."
+    "Hello Joshy Travels, I would like to plan my next journey with you."
   );
   const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 
@@ -32,7 +32,7 @@ export default function Footer({ variant = "default" }: FooterProps) {
               <Link href="/" className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
                 <Image
                   src="/images/logo.png"
-                  alt="JJ Travels Monogram"
+                  alt="Joshy Travels Monogram"
                   width={48}
                   height={48}
                   className="object-contain"
@@ -43,7 +43,7 @@ export default function Footer({ variant = "default" }: FooterProps) {
 
               <div>
                 <span className="text-white text-base font-semibold tracking-wide block">
-                  JJ Travels
+                  Joshy Travels
                 </span>
                 <span className="text-white/60 text-xs tracking-wider">
                   Explore &nbsp;·&nbsp; Discover &nbsp;·&nbsp; Experience
@@ -79,7 +79,7 @@ export default function Footer({ variant = "default" }: FooterProps) {
             <Link href="/" className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
               <Image
                 src="/images/logo.png"
-                alt="JJ Travels Monogram"
+                alt="Joshy Travels Monogram"
                 width={48}
                 height={48}
                 className="object-contain"
@@ -124,7 +124,7 @@ export default function Footer({ variant = "default" }: FooterProps) {
           </div>
 
           <div>
-            <p>&copy; 2026 JJ Travels. All rights reserved.</p>
+            <p>&copy; 2026 Joshy Travels. All rights reserved.</p>
           </div>
         </div>
       </div>

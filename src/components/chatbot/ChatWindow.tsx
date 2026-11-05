@@ -173,7 +173,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
         overflow-hidden
       "
       role="dialog"
-      aria-label="JJ Travel Assistant Chat"
+      aria-label="Joshy Travel Assistant Chat"
       aria-modal="true"
     >
       {/* Header */}
@@ -216,3 +216,4 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
     </div>
   );
 }
+

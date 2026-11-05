@@ -9,7 +9,7 @@ export default function GalleryHero() {
         <div className="flex items-center gap-3 mb-6">
           <span className="h-px w-8 bg-gold" />
           <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">
-            JJ Travels &nbsp;·&nbsp; Visual Archive
+            Joshy Travels &nbsp;·&nbsp; Visual Archive
           </span>
         </div>
 

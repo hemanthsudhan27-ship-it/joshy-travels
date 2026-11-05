@@ -48,7 +48,7 @@ function AdminDashboardContent() {
 
       {/* Footer Status Bar */}
       <footer className="border-t border-white/5 py-4 px-6 text-center text-[11px] text-[#737373] uppercase tracking-widest bg-zinc-950">
-        JJ Travels Console • Serverless Git-Backed CMS • Connected via GitHub REST API
+        Joshy Travels Console • Serverless Git-Backed CMS • Connected via GitHub REST API
       </footer>
     </div>
   )

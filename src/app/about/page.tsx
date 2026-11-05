@@ -9,7 +9,7 @@ import OurPromise from "@/components/about/OurPromise";
 import AboutCTA from "@/components/about/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "About Us | JJ Travels - The People Behind Your Next Journey",
+  title: "About Us | Joshy Travels - The People Behind Your Next Journey",
   description:
     "A travel company passionate about creating meaningful journeys, unforgettable experiences and stories that stay with you forever.",
 };

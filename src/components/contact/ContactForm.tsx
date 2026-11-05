@@ -44,7 +44,7 @@ export default function ContactForm() {
   // Generate WhatsApp text with current form details
   const buildWhatsAppText = () => {
     const parts = [
-      `*New Travel Inquiry via JJ Travels Website*`,
+      `*New Travel Inquiry via Joshy Travels Website*`,
       `*Name:* ${formData.fullName || "Guest"}`,
       formData.phone ? `*Phone:* ${formData.phone}` : null,
       formData.email ? `*Email:* ${formData.email}` : null,

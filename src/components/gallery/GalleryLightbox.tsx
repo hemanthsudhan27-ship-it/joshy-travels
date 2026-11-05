@@ -63,7 +63,7 @@ export default function GalleryLightbox({
   if (!isOpen || !currentItem) return null;
 
   const whatsappMessage = encodeURIComponent(
-    `Hello JJ Travels! I saw the photo "${currentItem.title}" in your gallery (${currentItem.location}) and would like to enquire about planning a journey here.`
+    `Hello Joshy Travels! I saw the photo "${currentItem.title}" in your gallery (${currentItem.location}) and would like to enquire about planning a journey here.`
   );
   const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 

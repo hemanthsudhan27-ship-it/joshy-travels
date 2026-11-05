@@ -30,15 +30,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!pkg) {
     return {
-      title: "Package Not Found | JJ Travels",
+      title: "Package Not Found | Joshy Travels",
     };
   }
 
   return {
-    title: `${pkg.title} (${pkg.duration}) | JJ Travels Luxury Packages`,
+    title: `${pkg.title} (${pkg.duration}) | Joshy Travels Luxury Packages`,
     description: pkg.overview,
     openGraph: {
-      title: `${pkg.title} | JJ Travels`,
+      title: `${pkg.title} | Joshy Travels`,
       description: pkg.overview,
       images: [{ url: pkg.heroImage }],
     },

@@ -6,7 +6,7 @@ import PackagesCatalog from "@/components/packages/PackagesCatalog";
 import CustomTripBanner from "@/components/packages/CustomTripBanner";
 
 export const metadata: Metadata = {
-  title: "Tour Packages | JJ Travels - Handpicked Luxury Experiences",
+  title: "Tour Packages | Joshy Travels - Handpicked Luxury Experiences",
   description:
     "Explore handpicked luxury tour packages across Switzerland, Bali, Dubai, the Amalfi Coast, and Santorini. All-inclusive bespoke holiday curations.",
 };

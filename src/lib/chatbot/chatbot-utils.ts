@@ -1,5 +1,5 @@
 // ============================================================
-// JJ TRAVELS — CHATBOT UTILITY HELPERS
+// Joshy Travels — CHATBOT UTILITY HELPERS
 // ============================================================
 
 import { WHATSAPP_NUMBER } from "./faq-data";
@@ -17,7 +17,7 @@ export function generateMessageId(): string {
 export function buildChatbotWhatsAppUrl(customMessage?: string): string {
   const message =
     customMessage ??
-    "Hello JJ Travels, I need assistance with a travel enquiry.";
+    "Hello Joshy Travels, I need assistance with a travel enquiry.";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
@@ -74,4 +74,5 @@ export const FALLBACK_RESPONSE =
 
 /** Initial greeting message */
 export const GREETING_MESSAGE =
-  "Hello! 👋 Welcome to JJ Travels. I'm your travel assistant, here to help with questions about our packages, services, visa assistance, and more.\n\nWhat would you like to know?";
+  "Hello! 👋 Welcome to Joshy Travels. I'm your travel assistant, here to help with questions about our packages, services, visa assistance, and more.\n\nWhat would you like to know?";
+

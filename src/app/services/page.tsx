@@ -7,9 +7,9 @@ import ServicesValues from "@/components/services/ServicesValues";
 import ServicesCTA from "@/components/services/ServicesCTA";
 
 export const metadata: Metadata = {
-  title: "Services | JJ Travels - Travel, Made Simple",
+  title: "Services | Joshy Travels - Travel, Made Simple",
   description:
-    "Everything you need, one travel partner. Explore JJ Travels' 9 specialized services: domestic & international packages, honeymoons, custom trips, flights, stays, and visas.",
+    "Everything you need, one travel partner. Explore Joshy Travels' 9 specialized services: domestic & international packages, honeymoons, custom trips, flights, stays, and visas.",
 };
 
 export default function ServicesPage() {

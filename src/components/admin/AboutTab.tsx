@@ -212,7 +212,7 @@ export default function AboutTab() {
         <div>
           <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#FFD700]">Brand Philosophy</span>
           <h2 className="text-2xl lg:text-3xl font-extrabold text-white tracking-tight uppercase font-syne mt-1">
-            About JJ Travels CMS
+            About Joshy Travels CMS
           </h2>
           <p className="text-xs text-[#A3A3A3] mt-1">
             Manage your narrative, photography, journey milestones timeline, core principles, and closing promise.

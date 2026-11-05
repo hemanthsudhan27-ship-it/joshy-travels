@@ -68,7 +68,7 @@ export default function OurStory() {
               <div className="w-full h-full relative lg:clip-parallelogram rounded-2xl lg:rounded-none overflow-hidden shadow-2xl">
                 <Image
                   src="/images/about/about-story-hd.jpg"
-                  alt="JJ Travels - Italian Coastal Cliffside Village at Sunset"
+                  alt="Joshy Travels - Italian Coastal Cliffside Village at Sunset"
                   fill
                   sizes="(max-width: 1024px) 100vw, 680px"
                   className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"
@@ -94,7 +94,7 @@ export default function OurStory() {
             </h2>
 
             <p className="font-body text-base sm:text-lg text-white/75 leading-relaxed mb-8 max-w-xl font-normal">
-              JJ Travels was founded with a simple belief — travel changes the way we see the world. What began as a passion for exploration has grown into a trusted travel partner for individuals, families and groups across destinations.
+              Joshy Travels was founded with a simple belief — travel changes the way we see the world. What began as a passion for exploration has grown into a trusted travel partner for individuals, families and groups across destinations.
             </p>
 
             <div>

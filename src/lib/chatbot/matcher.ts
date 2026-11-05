@@ -1,5 +1,5 @@
 // ============================================================
-// JJ TRAVELS — CHATBOT INTENT MATCHER
+// Joshy Travels — CHATBOT INTENT MATCHER
 // Keyword scoring with category weighting & confidence threshold
 // ============================================================
 
@@ -152,3 +152,4 @@ export function findFAQByQuestion(question: string): MatchResult {
   // Fall back to keyword matching
   return matchFAQ(question);
 }
+

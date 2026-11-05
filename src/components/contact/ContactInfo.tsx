@@ -5,7 +5,7 @@ import { MessageCircle, Phone, Mail, Clock, MapPin, ArrowUpRight } from "lucide-
 export default function ContactInfo() {
   const whatsappUrl =
     "https://wa.me/919999999999?text=" +
-    encodeURIComponent("Hello JJ Travels! I'd like to consult with your travel coordinators for an upcoming trip.");
+    encodeURIComponent("Hello Joshy Travels! I'd like to consult with your travel coordinators for an upcoming trip.");
 
   return (
     <div className="space-y-8">
@@ -19,7 +19,7 @@ export default function ContactInfo() {
           <span className="text-gold font-serif italic font-normal">Travel Coordinators</span>
         </h2>
         <p className="text-white/60 text-sm leading-relaxed mb-8">
-          At JJ Travels, you won&apos;t deal with impersonal call centers. You connect directly with experienced travel specialists dedicated to your itinerary from departure to safe return.
+          At Joshy Travels, you won&apos;t deal with impersonal call centers. You connect directly with experienced travel specialists dedicated to your itinerary from departure to safe return.
         </p>
 
         {/* WhatsApp Highlight Box */}

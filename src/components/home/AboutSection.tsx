@@ -43,7 +43,7 @@ export default function AboutSection() {
               <div className="w-full h-full relative lg:clip-diagonal overflow-hidden lg:rounded-r-2xl">
                 <Image
                   src={aboutSneak.image || "/images/about/amalfi-hd.jpg"}
-                  alt="JJ Travels - Amalfi Coast Scenic Cliffside Drive"
+                  alt="Joshy Travels - Amalfi Coast Scenic Cliffside Drive"
                   fill
                   sizes="(max-width: 1024px) 100vw, 700px"
                   className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"

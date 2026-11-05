@@ -27,3 +27,4 @@ export default function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps
     </div>
   );
 }
+

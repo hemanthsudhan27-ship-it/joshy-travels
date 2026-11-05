@@ -42,7 +42,7 @@ export default function AdminHeader({ activeTab, onTabChange }: AdminHeaderProps
             <Link href="/" className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-gold/50">
               <Image
                 src="/images/logo.png"
-                alt="JJ Travels"
+                alt="Joshy Travels"
                 width={44}
                 height={44}
                 priority
@@ -51,7 +51,7 @@ export default function AdminHeader({ activeTab, onTabChange }: AdminHeaderProps
             </Link>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="font-heading font-bold text-lg text-white">JJ Travels</h1>
+                <h1 className="font-heading font-bold text-lg text-white">Joshy Travels</h1>
                 <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-gold/15 text-gold font-semibold border border-gold/30">
                   CMS Console
                 </span>

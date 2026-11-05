@@ -7,7 +7,7 @@ export default function ReviewsHero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/about/villa-hd.jpg"
-          alt="JJ Travels - Client Testimonials"
+          alt="Joshy Travels - Client Testimonials"
           fill
           priority
           className="object-cover object-center opacity-30 scale-100"

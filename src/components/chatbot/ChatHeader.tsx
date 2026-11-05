@@ -15,10 +15,10 @@ export default function ChatHeader({ onClose, onMinimize }: ChatHeaderProps) {
       <div className="flex items-center gap-3">
         {/* Gold avatar / icon */}
         <div className="w-9 h-9 rounded-full bg-[#FFD700] flex items-center justify-center shadow-md flex-shrink-0">
-          <span className="font-heading text-black font-extrabold text-sm leading-none">JJ</span>
+          <span className="font-heading text-black font-extrabold text-sm leading-none">JT</span>
         </div>
         <div>
-          <p className="text-white font-heading font-bold text-sm leading-tight">JJ Travel Assistant</p>
+          <p className="text-white font-heading font-bold text-sm leading-tight">Joshy Travel Assistant</p>
           <div className="flex items-center gap-1.5 mt-0.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-[10px] text-white/50 font-body">Online — ready to assist</span>
@@ -46,3 +46,4 @@ export default function ChatHeader({ onClose, onMinimize }: ChatHeaderProps) {
     </div>
   );
 }
+

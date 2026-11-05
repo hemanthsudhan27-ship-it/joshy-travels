@@ -108,7 +108,7 @@ export default function EnquiryModal({
 
       // 2. Prepare WhatsApp message
       const childrenText = formData.children === "0" ? "None" : formData.children;
-      const messageText = `Hello JJ Travels! I would like to enquire about a bespoke package:
+      const messageText = `Hello Joshy Travels! I would like to enquire about a bespoke package:
 
 *Name*: ${formData.name}
 *Phone*: ${formData.phone}${formData.email ? `\n*Email*: ${formData.email}` : ""}
@@ -173,7 +173,7 @@ export default function EnquiryModal({
               Enquiry Submitted!
             </h3>
             <p className="text-xs sm:text-sm text-[#A3A3A3] max-w-sm mx-auto leading-relaxed">
-              Your details have been recorded in our concierge desk and opened in WhatsApp. A dedicated JJ Travels specialist will reach out to you shortly.
+              Your details have been recorded in our concierge desk and opened in WhatsApp. A dedicated Joshy Travels specialist will reach out to you shortly.
             </p>
 
             <div className="pt-4">

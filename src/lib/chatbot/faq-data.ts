@@ -1,5 +1,5 @@
 // ============================================================
-// JJ TRAVELS — FAQ KNOWLEDGE BASE
+// Joshy Travels — FAQ KNOWLEDGE BASE
 // Rule-based, agency-verified. No invented prices or policies.
 // ============================================================
 
@@ -12,18 +12,18 @@ export const faqData: FAQEntry[] = [
   {
     id: "what-is-jj-travels",
     category: "general",
-    question: "What is JJ Travels?",
+    question: "What is Joshy Travels?",
     keywords: [
-      "jj travels", "who are you", "about jj", "about you", "what is jj",
+      "Joshy Travels", "who are you", "about jj", "about you", "what is jj",
       "tell me about", "what do you do", "travel agency", "who is jj",
       "company", "agency", "about the company"
     ],
     answer:
-      "JJ Travels is a premium travel agency specializing in bespoke domestic and international travel experiences. We curate luxury tour packages, handle flight bookings, premium hotel reservations, and provide comprehensive visa assistance — all tailored to your personal travel style.",
+      "Joshy Travels is a premium travel agency specializing in bespoke domestic and international travel experiences. We curate luxury tour packages, handle flight bookings, premium hotel reservations, and provide comprehensive visa assistance — all tailored to your personal travel style.",
     followUps: [
       "What travel packages do you offer?",
       "What services do you provide?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
   },
   {
@@ -36,7 +36,7 @@ export const faqData: FAQEntry[] = [
       "service list", "type of services"
     ],
     answer:
-      "JJ Travels offers a comprehensive range of travel services:\n\n• **Tour Packages** — Domestic & International curated itineraries\n• **Flight Ticketing** — Domestic & international bookings\n• **Hotel Reservations** — Luxury & boutique stays\n• **Visa Assistance** — Documentation guidance & support\n• **Customized Trips** — Fully bespoke private itineraries\n• **Honeymoon Packages** — Romantic getaways designed for couples\n• **Family Holidays** — Kid-friendly, all-inclusive family trips\n• **Group Tours** — Coordinated travel for groups of all sizes",
+      "Joshy Travels offers a comprehensive range of travel services:\n\n• **Tour Packages** — Domestic & International curated itineraries\n• **Flight Ticketing** — Domestic & international bookings\n• **Hotel Reservations** — Luxury & boutique stays\n• **Visa Assistance** — Documentation guidance & support\n• **Customized Trips** — Fully bespoke private itineraries\n• **Honeymoon Packages** — Romantic getaways designed for couples\n• **Family Holidays** — Kid-friendly, all-inclusive family trips\n• **Group Tours** — Coordinated travel for groups of all sizes",
     followUps: [
       "Do you arrange international trips?",
       "Can I customize my itinerary?",
@@ -46,18 +46,18 @@ export const faqData: FAQEntry[] = [
   {
     id: "how-to-book",
     category: "booking",
-    question: "How can I book a trip with JJ Travels?",
+    question: "How can I book a trip with Joshy Travels?",
     keywords: [
       "how to book", "book a trip", "booking process", "how do i book",
       "make a booking", "reserve", "get started", "begin booking",
       "book now", "place a booking", "booking enquiry", "steps to book"
     ],
     answer:
-      "Booking with JJ Travels is simple! You can:\n\n1. **WhatsApp us directly** — Send a message describing your travel plans and preferred dates\n2. **Use the Enquire button** on any package page to submit a quick enquiry form\n3. **Visit our Contact page** for all contact options\n\nOur travel specialists will respond promptly to design your perfect itinerary.",
+      "Booking with Joshy Travels is simple! You can:\n\n1. **WhatsApp us directly** — Send a message describing your travel plans and preferred dates\n2. **Use the Enquire button** on any package page to submit a quick enquiry form\n3. **Visit our Contact page** for all contact options\n\nOur travel specialists will respond promptly to design your perfect itinerary.",
     followUps: [
       "What travel packages do you offer?",
       "Can I customize my itinerary?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -73,7 +73,7 @@ export const faqData: FAQEntry[] = [
       "india trip", "kerala", "rajasthan", "goa", "himalayas", "andaman"
     ],
     answer:
-      "Yes! JJ Travels offers curated domestic tour packages across India's most iconic destinations — from the backwaters of Kerala and the golden deserts of Rajasthan, to the beaches of Goa, the temples of Tamil Nadu, and the majestic Himalayas. Each itinerary is crafted to reflect the region's authentic culture and natural beauty.\n\nContact our team to discuss available domestic packages and customise an itinerary to your interests.",
+      "Yes! Joshy Travels offers curated domestic tour packages across India's most iconic destinations — from the backwaters of Kerala and the golden deserts of Rajasthan, to the beaches of Goa, the temples of Tamil Nadu, and the majestic Himalayas. Each itinerary is crafted to reflect the region's authentic culture and natural beauty.\n\nContact our team to discuss available domestic packages and customise an itinerary to your interests.",
     followUps: [
       "Can I customize my itinerary?",
       "Do you offer family holiday packages?",
@@ -94,7 +94,7 @@ export const faqData: FAQEntry[] = [
       "world tour", "global"
     ],
     answer:
-      "Absolutely! International travel is our speciality. JJ Travels curates premium packages to some of the world's most coveted destinations, including:\n\n• **Asia** — Bali, Singapore, Thailand, Sri Lanka, Maldives\n• **Middle East** — Dubai, Abu Dhabi\n• **Europe** — Switzerland, Italy (Amalfi Coast), France, UK\n• **And many more** — based on your dream destination\n\nEach international package includes carefully vetted accommodation, transfers, and guided experiences.",
+      "Absolutely! International travel is our speciality. Joshy Travels curates premium packages to some of the world's most coveted destinations, including:\n\n• **Asia** — Bali, Singapore, Thailand, Sri Lanka, Maldives\n• **Middle East** — Dubai, Abu Dhabi\n• **Europe** — Switzerland, Italy (Amalfi Coast), France, UK\n• **And many more** — based on your dream destination\n\nEach international package includes carefully vetted accommodation, transfers, and guided experiences.",
     followUps: [
       "Do you provide visa assistance?",
       "What travel packages do you offer?",
@@ -111,7 +111,7 @@ export const faqData: FAQEntry[] = [
       "package options", "which packages", "what trips"
     ],
     answer:
-      "JJ Travels offers a diverse range of thoughtfully curated travel packages:\n\n• **Bali Escape** — Lush tropical paradise, temples & rice terraces\n• **Switzerland Explorer** — Alpine grandeur, Matterhorn & pristine lakes\n• **Dubai Getaway** — Iconic skyline, desert safaris & luxury shopping\n• **Honeymoon Specials** — Romantic escapes for couples\n• **Family Holidays** — Fun-filled, safe & memorable family adventures\n• **Group Tours** — Shared experiences for friends or colleagues\n• **Custom Itineraries** — Fully personalised to your wishes\n\nVisit the Packages page to explore full itineraries, or enquire to discuss a bespoke trip.",
+      "Joshy Travels offers a diverse range of thoughtfully curated travel packages:\n\n• **Bali Escape** — Lush tropical paradise, temples & rice terraces\n• **Switzerland Explorer** — Alpine grandeur, Matterhorn & pristine lakes\n• **Dubai Getaway** — Iconic skyline, desert safaris & luxury shopping\n• **Honeymoon Specials** — Romantic escapes for couples\n• **Family Holidays** — Fun-filled, safe & memorable family adventures\n• **Group Tours** — Shared experiences for friends or colleagues\n• **Custom Itineraries** — Fully personalised to your wishes\n\nVisit the Packages page to explore full itineraries, or enquire to discuss a bespoke trip.",
     followUps: [
       "Do you arrange international trips?",
       "Can I customize my itinerary?",
@@ -130,11 +130,11 @@ export const faqData: FAQEntry[] = [
       "couples travel", "newly wed", "romance", "couple package"
     ],
     answer:
-      "Yes, JJ Travels specialises in creating unforgettable honeymoon experiences! Our romantic packages are crafted with privacy, luxury, and intimate moments in mind — from overwater bungalows in the Maldives and candlelit dinners in Santorini, to enchanting Bali temples and alpine retreats in Switzerland.\n\nEvery honeymoon package can be personalised with special touches — floral arrangements, private dinners, couples spa treatments, and more. Contact us to design your dream honeymoon.",
+      "Yes, Joshy Travels specialises in creating unforgettable honeymoon experiences! Our romantic packages are crafted with privacy, luxury, and intimate moments in mind — from overwater bungalows in the Maldives and candlelit dinners in Santorini, to enchanting Bali temples and alpine retreats in Switzerland.\n\nEvery honeymoon package can be personalised with special touches — floral arrangements, private dinners, couples spa treatments, and more. Contact us to design your dream honeymoon.",
     followUps: [
       "Can I customize my itinerary?",
       "Do you arrange international trips?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -150,7 +150,7 @@ export const faqData: FAQEntry[] = [
       "parents", "grandparents", "family friendly", "school holiday"
     ],
     answer:
-      "Absolutely! JJ Travels designs family-friendly holiday packages that keep every member of the family — from little ones to grandparents — happy and comfortable. Our family packages feature:\n\n• **Kid-friendly activities** at every destination\n• **Spacious family accommodation** — suites, villas, or connecting rooms\n• **Flexible itineraries** that balance adventure and relaxation\n• **Safe, guided group tours** in each destination\n• **Practical support** — dietary needs, stroller-friendly venues, medical kit recommendations\n\nGet in touch to discuss your family's ideal holiday and we'll tailor a perfect itinerary.",
+      "Absolutely! Joshy Travels designs family-friendly holiday packages that keep every member of the family — from little ones to grandparents — happy and comfortable. Our family packages feature:\n\n• **Kid-friendly activities** at every destination\n• **Spacious family accommodation** — suites, villas, or connecting rooms\n• **Flexible itineraries** that balance adventure and relaxation\n• **Safe, guided group tours** in each destination\n• **Practical support** — dietary needs, stroller-friendly venues, medical kit recommendations\n\nGet in touch to discuss your family's ideal holiday and we'll tailor a perfect itinerary.",
     followUps: [
       "What travel packages do you offer?",
       "Can I customize my itinerary?",
@@ -170,11 +170,11 @@ export const faqData: FAQEntry[] = [
       "group holiday", "colleagues"
     ],
     answer:
-      "Yes! JJ Travels has extensive experience coordinating group travel for friends, families, corporate teams, and social groups. Our group tour services include:\n\n• **Coordinated logistics** — unified bookings for flights, hotels & transport\n• **Group rates** — competitive pricing for larger groups\n• **Dedicated trip coordinator** assigned to your group\n• **Shared & private group itineraries** to suit all interests\n• **Corporate retreats & incentive trips** are also welcome\n\nFor group enquiries, please contact us directly on WhatsApp for a customised group quote.",
+      "Yes! Joshy Travels has extensive experience coordinating group travel for friends, families, corporate teams, and social groups. Our group tour services include:\n\n• **Coordinated logistics** — unified bookings for flights, hotels & transport\n• **Group rates** — competitive pricing for larger groups\n• **Dedicated trip coordinator** assigned to your group\n• **Shared & private group itineraries** to suit all interests\n• **Corporate retreats & incentive trips** are also welcome\n\nFor group enquiries, please contact us directly on WhatsApp for a customised group quote.",
     followUps: [
       "Can I customize my itinerary?",
       "What travel packages do you offer?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -191,11 +191,11 @@ export const faqData: FAQEntry[] = [
       "build my own", "custom package", "customised"
     ],
     answer:
-      "Absolutely — customisation is at the heart of what JJ Travels does best. Every detail of your trip can be personalised:\n\n• **Destination & route** of your choice\n• **Travel dates** that suit your schedule\n• **Accommodation style** — budget, boutique, or luxury\n• **Activities & experiences** — adventure, cultural, relaxation, or a blend\n• **Group composition** — solo, couple, family, or friends\n• **Budget range** — we work to deliver the best value for your budget\n\nSimply reach out on WhatsApp or via our Contact page with your ideas, and our travel experts will design a fully bespoke itinerary for you.",
+      "Absolutely — customisation is at the heart of what Joshy Travels does best. Every detail of your trip can be personalised:\n\n• **Destination & route** of your choice\n• **Travel dates** that suit your schedule\n• **Accommodation style** — budget, boutique, or luxury\n• **Activities & experiences** — adventure, cultural, relaxation, or a blend\n• **Group composition** — solo, couple, family, or friends\n• **Budget range** — we work to deliver the best value for your budget\n\nSimply reach out on WhatsApp or via our Contact page with your ideas, and our travel experts will design a fully bespoke itinerary for you.",
     followUps: [
       "How can I book a trip?",
       "Do you provide visa assistance?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -211,11 +211,11 @@ export const faqData: FAQEntry[] = [
       "air fare", "airfare", "flight price", "cheapest flight", "ticket"
     ],
     answer:
-      "Yes, JJ Travels provides flight ticketing services for both domestic and international routes. We help you find suitable flight options, assist with the booking process, and ensure your travel connections are seamlessly coordinated with your overall itinerary.\n\nFor flight-specific enquiries, please contact us directly on WhatsApp with your travel dates, origin, and destination.",
+      "Yes, Joshy Travels provides flight ticketing services for both domestic and international routes. We help you find suitable flight options, assist with the booking process, and ensure your travel connections are seamlessly coordinated with your overall itinerary.\n\nFor flight-specific enquiries, please contact us directly on WhatsApp with your travel dates, origin, and destination.",
     followUps: [
       "Do you book hotel stays?",
       "Can I customize my itinerary?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -231,7 +231,7 @@ export const faqData: FAQEntry[] = [
       "luxury hotel", "boutique hotel", "book hotel", "hotel options"
     ],
     answer:
-      "Absolutely! JJ Travels arranges premium hotel and resort bookings at a wide range of properties — from charming boutique stays to internationally acclaimed luxury resorts. Our hotel partners offer verified quality, ensuring comfort and authenticity at your destination.\n\nAll hotels included in our packages are carefully vetted by our team. If you have a specific property in mind, let us know and we'll work to include it in your itinerary.",
+      "Absolutely! Joshy Travels arranges premium hotel and resort bookings at a wide range of properties — from charming boutique stays to internationally acclaimed luxury resorts. Our hotel partners offer verified quality, ensuring comfort and authenticity at your destination.\n\nAll hotels included in our packages are carefully vetted by our team. If you have a specific property in mind, let us know and we'll work to include it in your itinerary.",
     followUps: [
       "What travel packages do you offer?",
       "Can I customize my itinerary?",
@@ -251,11 +251,11 @@ export const faqData: FAQEntry[] = [
       "visa fees", "visa approval", "get visa", "need visa"
     ],
     answer:
-      "Yes, JJ Travels provides visa assistance as part of our travel services. We guide you through the documentation requirements, help you prepare your application materials, and advise on the process for your chosen destination.\n\n**Please note:** Visa approval decisions are made solely by the respective country's embassy or consulate. JJ Travels facilitates the process but cannot guarantee visa issuance.\n\nContact us early in your planning process so we can factor visa timelines into your itinerary.",
+      "Yes, Joshy Travels provides visa assistance as part of our travel services. We guide you through the documentation requirements, help you prepare your application materials, and advise on the process for your chosen destination.\n\n**Please note:** Visa approval decisions are made solely by the respective country's embassy or consulate. Joshy Travels facilitates the process but cannot guarantee visa issuance.\n\nContact us early in your planning process so we can factor visa timelines into your itinerary.",
     followUps: [
       "Do you arrange international trips?",
       "Can I customize my itinerary?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -269,10 +269,10 @@ export const faqData: FAQEntry[] = [
       "visa approved", "confirm visa"
     ],
     answer:
-      "No — JJ Travels cannot guarantee visa approval. All visa decisions are made exclusively by the respective country's embassy or immigration authorities, based on the applicant's personal circumstances and documentation.\n\nWhat we can do is help you prepare a strong, complete application with all required documents, and advise you on the best practices for your destination. We always recommend applying well in advance of your planned travel dates.",
+      "No — Joshy Travels cannot guarantee visa approval. All visa decisions are made exclusively by the respective country's embassy or immigration authorities, based on the applicant's personal circumstances and documentation.\n\nWhat we can do is help you prepare a strong, complete application with all required documents, and advise you on the best practices for your destination. We always recommend applying well in advance of your planned travel dates.",
     followUps: [
       "Do you provide visa assistance?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
       "Do you arrange international trips?",
     ],
   },
@@ -288,9 +288,9 @@ export const faqData: FAQEntry[] = [
       "request quote", "get information", "get info", "find out more"
     ],
     answer:
-      "Making an enquiry with JJ Travels is quick and easy:\n\n• **WhatsApp** — Message us directly for the fastest response\n• **Enquiry Form** — Click the \"Enquire\" button on any package page to submit a form\n• **Contact Page** — Visit our Contact page for all options\n\nPlease share your destination preference, travel dates, and group size, and our specialists will get back to you promptly.",
+      "Making an enquiry with Joshy Travels is quick and easy:\n\n• **WhatsApp** — Message us directly for the fastest response\n• **Enquiry Form** — Click the \"Enquire\" button on any package page to submit a form\n• **Contact Page** — Visit our Contact page for all options\n\nPlease share your destination preference, travel dates, and group size, and our specialists will get back to you promptly.",
     followUps: [
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
       "What travel packages do you offer?",
       "Can I customize my itinerary?",
     ],
@@ -307,7 +307,7 @@ export const faqData: FAQEntry[] = [
     answer:
       "Cancellation and refund terms vary depending on the specific package, airlines, and hotel partners involved. For accurate details about cancellation terms applicable to your booking, please contact our team directly.\n\nWe strongly recommend discussing cancellation terms before confirming any booking, and considering travel insurance for added peace of mind.",
     followUps: [
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
       "How can I book a trip?",
       "Do you provide visa assistance?",
     ],
@@ -326,7 +326,7 @@ export const faqData: FAQEntry[] = [
       "For specific payment options and terms applicable to your booking, please contact our team directly on WhatsApp. Our specialists will walk you through the available payment options for your package.",
     followUps: [
       "How can I book a trip?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -335,7 +335,7 @@ export const faqData: FAQEntry[] = [
   {
     id: "contact-info",
     category: "contact",
-    question: "How can I contact JJ Travels?",
+    question: "How can I contact Joshy Travels?",
     keywords: [
       "contact", "reach you", "get in touch", "contact details",
       "how to contact", "phone number", "email", "whatsapp number",
@@ -343,7 +343,7 @@ export const faqData: FAQEntry[] = [
       "customer service", "help", "office"
     ],
     answer:
-      "You can reach JJ Travels through:\n\n• **WhatsApp** — Send us a message for the fastest response (button below)\n• **Contact Page** — Visit our Contact Us page for all details\n• **Enquiry Form** — Submit a request through any package page\n\nOur team is ready to help with any travel question you have!",
+      "You can reach Joshy Travels through:\n\n• **WhatsApp** — Send us a message for the fastest response (button below)\n• **Contact Page** — Visit our Contact Us page for all details\n• **Enquiry Form** — Submit a request through any package page\n\nOur team is ready to help with any travel question you have!",
     followUps: [
       "How can I book a trip?",
       "What travel packages do you offer?",
@@ -354,7 +354,7 @@ export const faqData: FAQEntry[] = [
   {
     id: "whatsapp-contact",
     category: "contact",
-    question: "Can I message JJ Travels on WhatsApp?",
+    question: "Can I message Joshy Travels on WhatsApp?",
     keywords: [
       "whatsapp", "whatsapp message", "message on whatsapp",
       "chat on whatsapp", "wa", "wa.me", "whatsapp chat"
@@ -379,11 +379,11 @@ export const faqData: FAQEntry[] = [
       "expensive", "budget", "pricing details", "cost of", "fee"
     ],
     answer:
-      "Package pricing at JJ Travels varies based on destination, travel dates, group size, accommodation preferences, and inclusions. We cater to a range of budgets and always aim to deliver exceptional value.\n\nFor a personalised quote, please contact our team on WhatsApp with your travel requirements — destination, dates, and group size — and we'll prepare a tailored proposal for you.",
+      "Package pricing at Joshy Travels varies based on destination, travel dates, group size, accommodation preferences, and inclusions. We cater to a range of budgets and always aim to deliver exceptional value.\n\nFor a personalised quote, please contact our team on WhatsApp with your travel requirements — destination, dates, and group size — and we'll prepare a tailored proposal for you.",
     followUps: [
       "What travel packages do you offer?",
       "Can I customize my itinerary?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
     ],
     whatsappRedirect: true,
   },
@@ -398,10 +398,10 @@ export const faqData: FAQEntry[] = [
       "medical cover", "insured", "insurance policy", "protect trip"
     ],
     answer:
-      "JJ Travels recommends that all travellers obtain comprehensive travel insurance before departure. While we can advise you on what to look for in a policy, we strongly suggest consulting a registered insurance provider for travel coverage options suitable for your destination and trip type.\n\nContact our team for general guidance on what travel insurance typically covers for international journeys.",
+      "Joshy Travels recommends that all travellers obtain comprehensive travel insurance before departure. While we can advise you on what to look for in a policy, we strongly suggest consulting a registered insurance provider for travel coverage options suitable for your destination and trip type.\n\nContact our team for general guidance on what travel insurance typically covers for international journeys.",
     followUps: [
       "Do you provide visa assistance?",
-      "How can I contact JJ Travels?",
+      "How can I contact Joshy Travels?",
       "How can I book a trip?",
     ],
   },
@@ -415,3 +415,4 @@ export const INITIAL_SUGGESTIONS: string[] = [
   "Do you provide visa assistance?",
   "How can I book a trip?",
 ];
+

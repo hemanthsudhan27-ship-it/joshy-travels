@@ -88,7 +88,7 @@ export default function PackagesTab() {
         "Luxury 5★ accommodation",
         "Daily gourmet breakfasts",
         "Private chauffeur transfers",
-        "24/7 dedicated JJ Travels concierge",
+        "24/7 dedicated Joshy Travels concierge",
       ],
       exclusions: [
         "International airfare",

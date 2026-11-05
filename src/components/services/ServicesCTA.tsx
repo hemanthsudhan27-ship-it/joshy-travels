@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function ServicesCTA() {
   const whatsappMessage = encodeURIComponent(
-    "Hello JJ Travels, I would like to enquire about planning a customized trip."
+    "Hello Joshy Travels, I would like to enquire about planning a customized trip."
   );
   const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 

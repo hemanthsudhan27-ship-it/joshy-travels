@@ -3,7 +3,7 @@ import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function GalleryCTA() {
   const whatsappMessage = encodeURIComponent(
-    "Hello JJ Travels! I was exploring your photo gallery and would like to plan a bespoke journey inspired by these destinations."
+    "Hello Joshy Travels! I was exploring your photo gallery and would like to plan a bespoke journey inspired by these destinations."
   );
   const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 

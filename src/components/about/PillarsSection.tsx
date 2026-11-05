@@ -43,7 +43,7 @@ export default function PillarsSection() {
             PILLARS OF EXCELLENCE
           </span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
-            Why Discerning Travellers Choose <span className="text-gold">JJ Travels</span>
+            Why Discerning Travellers Choose <span className="text-gold">Joshy Travels</span>
           </h2>
         </div>
 

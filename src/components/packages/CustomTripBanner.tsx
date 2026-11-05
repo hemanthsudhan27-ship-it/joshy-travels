@@ -2,7 +2,7 @@ import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function CustomTripBanner() {
   const whatsappMessage = encodeURIComponent(
-    "Hello JJ Travels, I would like to design a bespoke custom itinerary for my upcoming trip."
+    "Hello Joshy Travels, I would like to design a bespoke custom itinerary for my upcoming trip."
   );
   const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 

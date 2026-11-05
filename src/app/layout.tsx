@@ -27,10 +27,10 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jjtravels.com"),
-  title: "JJ Travels | Curated Journeys & Luxury Travel Experiences",
+  metadataBase: new URL("https://joshytravels.com"),
+  title: "Joshy Travels | Curated Journeys & Luxury Travel Experiences",
   description:
-    "Explore the world with JJ Travels. Bespoke luxury tour packages, flight ticketing, premium hotel booking, and visa assistance worldwide.",
+    "Explore the world with Joshy Travels. Bespoke luxury tour packages, flight ticketing, premium hotel booking, and visa assistance worldwide.",
   icons: {
     icon: "/images/logo.png",
   },
@@ -48,7 +48,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-black text-white selection:bg-[#FFD700] selection:text-black font-body">
         <SmoothScroll>{children}</SmoothScroll>
-        {/* Global FAQ Chatbot — excluded from admin routes */}
+        {/* Global FAQ Chatbot */}
         <Chatbot />
       </body>
     </html>

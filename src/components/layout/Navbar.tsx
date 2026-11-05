@@ -35,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   const whatsappMessage = encodeURIComponent(
-    "Hello JJ Travels, I would like to enquire about planning a customized trip."
+    "Hello Joshy Travels, I would like to enquire about planning a customized trip."
   );
   const whatsappUrl = `https://wa.me/919999999999?text=${whatsappMessage}`;
 
@@ -53,7 +53,7 @@ export default function Navbar() {
           <div className="relative w-12 h-12 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-105">
             <Image
               src="/images/logo.png"
-              alt="JJ Travels"
+              alt="Joshy Travels"
               width={48}
               height={48}
               priority

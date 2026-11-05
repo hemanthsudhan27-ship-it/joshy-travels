@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* 2.4 Concierge Capabilities & Services Sneak Peek */}
         <ServicesSneakPeek />
 
-        {/* 2.5 About JJ Travels Editorial Narrative */}
+        {/* 2.5 About Joshy Travels Editorial Narrative */}
         <AboutSection />
 
         {/* 2.6 Visual Archive & Gallery Moments Sneak Peek */}

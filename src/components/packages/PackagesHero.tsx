@@ -7,7 +7,7 @@ export default function PackagesHero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/about/about-hero-hd.jpg"
-          alt="JJ Travels - Tour Packages"
+          alt="Joshy Travels - Tour Packages"
           fill
           priority
           className="object-cover object-center opacity-40 scale-100"
@@ -22,7 +22,7 @@ export default function PackagesHero() {
       <div className="relative z-20 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
         <div className="max-w-3xl mx-auto">
           <span className="text-[11px] sm:text-[13px] tracking-[0.28em] uppercase font-semibold text-gold block mb-4">
-            JJ TRAVELS &nbsp;/&nbsp; HANDPICKED EXPERIENCES
+            Joshy Travels &nbsp;/&nbsp; HANDPICKED EXPERIENCES
           </span>
 
           <h1 className="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[1.05] uppercase text-white mb-6">

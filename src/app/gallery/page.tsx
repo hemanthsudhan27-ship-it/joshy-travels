@@ -6,13 +6,13 @@ import GalleryGrid from "@/components/gallery/GalleryGrid";
 import GalleryCTA from "@/components/gallery/GalleryCTA";
 
 export const metadata: Metadata = {
-  title: "Visual Archive & Travel Moments | JJ Travels — Luxury Journeys",
+  title: "Visual Archive & Travel Moments | Joshy Travels — Luxury Journeys",
   description:
-    "Explore the visual archive of JJ Travels. Handpicked photography from the Swiss Alps, Amalfi Coast, Santorini caldera, Dubai horizons, and luxury private villas worldwide.",
+    "Explore the visual archive of Joshy Travels. Handpicked photography from the Swiss Alps, Amalfi Coast, Santorini caldera, Dubai horizons, and luxury private villas worldwide.",
   openGraph: {
-    title: "Visual Archive & Travel Moments | JJ Travels",
+    title: "Visual Archive & Travel Moments | Joshy Travels",
     description:
-      "A curated photographic window into the destinations, bespoke journeys, and 5-star handpicked stays curated by JJ Travels.",
+      "A curated photographic window into the destinations, bespoke journeys, and 5-star handpicked stays curated by Joshy Travels.",
     images: [{ url: "/images/packages/switzerland-hd.jpg" }],
   },
 };

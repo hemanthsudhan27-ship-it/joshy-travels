@@ -66,7 +66,7 @@ export default function AboutHero() {
       <div ref={imageRef} className="absolute inset-0 z-0 will-change-transform">
         <Image
           src="/images/about/about-hero-hd.jpg"
-          alt="About JJ Travels - Mountain Ridge at Sunset"
+          alt="About Joshy Travels - Mountain Ridge at Sunset"
           fill
           priority
           className="object-cover object-right md:object-center opacity-85"

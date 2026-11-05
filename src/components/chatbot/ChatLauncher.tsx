@@ -13,8 +13,8 @@ export default function ChatLauncher({ isOpen, onClick, unread = false }: ChatLa
   return (
     <button
       onClick={onClick}
-      aria-label={isOpen ? "Close JJ Travel Assistant" : "Open JJ Travel Assistant"}
-      title={isOpen ? "Close chat" : "Chat with JJ Travels"}
+      aria-label={isOpen ? "Close Joshy Travel Assistant" : "Open Joshy Travel Assistant"}
+      title={isOpen ? "Close chat" : "Chat with Joshy Travels"}
       className="
         relative w-14 h-14
         rounded-full
@@ -51,3 +51,4 @@ export default function ChatLauncher({ isOpen, onClick, unread = false }: ChatLa
     </button>
   );
 }
+

@@ -10,7 +10,7 @@ interface FAQItem {
 
 const FAQS: FAQItem[] = [
   {
-    question: "How does JJ Travels customize private itineraries?",
+    question: "How does Joshy Travels customize private itineraries?",
     answer:
       "Every custom trip begins with a 1-on-1 consultation where we learn your travel pace, preferred hotel categories, dining preferences, and specific bucket-list highlights. We then curate a personalized day-by-day itinerary with verified local partners, luxury transfers, and curated excursions before finalizing reservations.",
   },
@@ -58,7 +58,7 @@ export default function ContactFAQ() {
             <span className="text-gold font-serif italic font-normal">Questions</span>
           </h2>
           <p className="mt-4 text-white/60 text-sm sm:text-base font-light">
-            Everything you need to know about planning, booking, and traveling with JJ Travels.
+            Everything you need to know about planning, booking, and traveling with Joshy Travels.
           </p>
         </div>
 

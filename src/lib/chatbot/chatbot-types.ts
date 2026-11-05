@@ -1,5 +1,5 @@
 // ============================================================
-// JJ TRAVELS — CHATBOT TYPE DEFINITIONS
+// Joshy Travels — CHATBOT TYPE DEFINITIONS
 // ============================================================
 
 export type MessageRole = "user" | "assistant";
@@ -48,3 +48,4 @@ export interface ChatbotState {
   messages: ChatMessage[];
   isTyping: boolean;
 }
+

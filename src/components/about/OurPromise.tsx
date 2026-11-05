@@ -50,7 +50,7 @@ export default function OurPromise() {
       >
         <Image
           src="/images/about/about-viaduct-hd.jpg"
-          alt="JJ Travels - Scenic Alpine Train Crossing Historic Stone Viaduct"
+          alt="Joshy Travels - Scenic Alpine Train Crossing Historic Stone Viaduct"
           fill
           priority
           className="object-cover object-right md:object-center opacity-85"

@@ -68,7 +68,7 @@ const servicesList: ServiceEntry[] = [
 export default function ServicesList() {
   const whatsappUrl = (title: string) => {
     const msg = encodeURIComponent(
-      `Hello JJ Travels, I would like to enquire about your ${title} service.`
+      `Hello Joshy Travels, I would like to enquire about your ${title} service.`
     );
     return `https://wa.me/919999999999?text=${msg}`;
   };
