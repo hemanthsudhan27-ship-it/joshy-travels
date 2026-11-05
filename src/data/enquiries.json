@@ -1,17 +1,1 @@
-[
-  {
-    "id": "enq-1730558002",
-    "createdAt": "2026-11-01T16:30:00.000Z",
-    "name": "Priya Nair",
-    "phone": "+91 79073 18843",
-    "email": "priya.nair@example.com",
-    "destination": "Amalfi Coast & Capri Odyssey",
-    "packageSlug": "amalfi-coast-odyssey",
-    "adults": "2",
-    "children": "0",
-    "preferredDate": "2027-01-10",
-    "message": "Honeymoon inquiry. Looking for ocean cliffside villa in Positano and private sunset sail.",
-    "status": "followed_up",
-    "notes": "Spoke on WhatsApp. Sent tailored PDF proposal with private boat sail."
-  }
-]
+[]
