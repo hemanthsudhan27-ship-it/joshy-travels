@@ -24,7 +24,7 @@ export default function ReviewsList() {
       .toUpperCase();
   };
   return (
-    <section className="relative z-10 bg-black py-20 sm:py-28 border-t border-white/10">
+    <section className="relative z-10 bg-black pt-10 pb-20 sm:pt-12 sm:pb-28 border-t border-white/10">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">

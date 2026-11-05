@@ -29,7 +29,7 @@ export default function InteractiveServices() {
   };
 
   return (
-    <section className="relative z-10 bg-black py-20 sm:py-32">
+    <section className="relative z-10 bg-black pt-10 pb-20 sm:pt-12 sm:pb-32">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Heading */}
         <div className="mb-16 sm:mb-24 max-w-2xl">

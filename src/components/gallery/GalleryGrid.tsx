@@ -32,7 +32,7 @@ export default function GalleryGrid() {
   };
 
   return (
-    <section className="py-12 sm:py-16 bg-black text-white">
+    <section className="pt-8 pb-12 sm:pt-10 sm:pb-16 bg-black text-white">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
         {/* Category Filters Bar */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-14">

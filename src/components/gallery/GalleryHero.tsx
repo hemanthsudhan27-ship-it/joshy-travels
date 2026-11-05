@@ -1,67 +1,29 @@
 export default function GalleryHero() {
   return (
-    <section className="relative pt-36 pb-14 sm:pt-44 sm:pb-18 overflow-hidden bg-black text-white">
-      {/* Background ambient light */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-gold/5 blur-[150px] pointer-events-none rounded-full" />
-
-      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
-        {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-6">
-          <span className="h-px w-8 bg-gold" />
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">
-            Joshy Travels &nbsp;·&nbsp; Visual Archive
-          </span>
+    <section className="pt-28 sm:pt-32 pb-6 bg-black text-white">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <div>
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="h-px w-6 bg-gold" />
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold">
+                Visual Archive
+              </span>
+            </div>
+            {/* Compact Heading */}
+            <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+              Travel Moments
+            </h1>
+          </div>
+          {/* One-line descriptor — right-aligned on desktop */}
+          <p className="text-sm text-white/50 font-body max-w-xs sm:text-right pb-0.5">
+            Curated photography from every destination we serve.
+          </p>
         </div>
-
-        {/* Display Heading */}
-        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] max-w-4xl">
-          Capturing{" "}
-          <span className="text-gold font-serif italic font-normal">Moments</span> That
-          Stay Forever.
-        </h1>
-
-        {/* Supporting Narrative */}
-        <p className="mt-8 text-base sm:text-lg lg:text-xl text-white/70 max-w-2xl font-light leading-relaxed">
-          From the silence of eternal Swiss peaks and cliffside Mediterranean balconies to golden Arabian dunes — explore the living horizons and authentic stays curated by our team.
-        </p>
-
-        {/* Quick Badges Strip */}
-        <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <div>
-            <span className="text-gold font-heading text-xl sm:text-2xl font-bold block">
-              12
-            </span>
-            <span className="text-xs text-white/60 tracking-wider uppercase mt-1 block">
-              Curated Moments
-            </span>
-          </div>
-          <div>
-            <span className="text-gold font-heading text-xl sm:text-2xl font-bold block">
-              5★
-            </span>
-            <span className="text-xs text-white/60 tracking-wider uppercase mt-1 block">
-              Handpicked Stays
-            </span>
-          </div>
-          <div>
-            <span className="text-gold font-heading text-xl sm:text-2xl font-bold block">
-              100%
-            </span>
-            <span className="text-xs text-white/60 tracking-wider uppercase mt-1 block">
-              Verified Locations
-            </span>
-          </div>
-          <div>
-            <span className="text-gold font-heading text-xl sm:text-2xl font-bold block">
-              Direct
-            </span>
-            <span className="text-xs text-white/60 tracking-wider uppercase mt-1 block">
-              Concierge Access
-            </span>
-          </div>
-        </div>
+        {/* Thin divider */}
+        <div className="mt-6 h-px w-full bg-white/10" />
       </div>
     </section>
   );
 }
-

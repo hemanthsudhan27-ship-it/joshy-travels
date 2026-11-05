@@ -57,7 +57,7 @@ export default function PackagesCatalog() {
 
   return (
     <>
-      <section className="relative z-10 bg-black py-20 sm:py-28 border-t border-white/10">
+      <section className="relative z-10 bg-black pt-10 pb-20 sm:pt-12 sm:pb-28 border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           {/* Category Filter Tabs */}
           <div className="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto pb-4 mb-16 no-scrollbar">
