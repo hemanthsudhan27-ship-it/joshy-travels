@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Manrope, Cormorant_Garamond } from "next/font/google";
 import SmoothScroll from "@/components/providers/SmoothScroll";
+import Chatbot from "@/components/chatbot/Chatbot";
 import "./globals.css";
 
 const syne = Syne({
@@ -47,6 +48,8 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-black text-white selection:bg-[#FFD700] selection:text-black font-body">
         <SmoothScroll>{children}</SmoothScroll>
+        {/* Global FAQ Chatbot — excluded from admin routes */}
+        <Chatbot />
       </body>
     </html>
   );
