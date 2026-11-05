@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   X,
   Compass,
@@ -16,6 +16,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { packagesData } from "@/data/packagesData";
+import { useScrollLock } from "@/lib/scroll-lock";
 
 const WHATSAPP_TEST_NUMBER = "917907318843";
 
@@ -32,6 +33,9 @@ export default function EnquiryModal({
   defaultDestination,
   packageSlug,
 }: EnquiryModalProps) {
+  // Lock background scrolling while modal is open; automatically restores on close
+  useScrollLock(isOpen, "enquiry-modal");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -47,6 +51,27 @@ export default function EnquiryModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const handleClose = useCallback(() => {
+    onClose();
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setErrors({});
+    }, 300);
+  }, [onClose]);
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        handleClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, handleClose]);
+
+  // Pre-fill destination on open
   useEffect(() => {
     if (isOpen) {
       setIsSubmitted(false);
@@ -129,39 +154,73 @@ export default function EnquiryModal({
       setIsSubmitted(true);
     } catch (err) {
       console.error("Enquiry submission error:", err);
-      // Even if network fails, still allow WhatsApp opening for client
       setIsSubmitted(true);
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleClose = () => {
-    onClose();
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setErrors({});
-    }, 300);
-  };
-
   const todayStr = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-lg rounded-2xl bg-[#0D0D0D] border border-[#FFD700]/30 p-6 sm:p-8 text-white shadow-[0_0_50px_rgba(0,0,0,0.9)] max-h-[92vh] overflow-y-auto">
-        {/* Close Button */}
-        <button
-          type="button"
-          onClick={handleClose}
-          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-[#FFD700] transition-colors"
-          aria-label="Close modal"
-        >
-          <X className="w-4 h-4" />
-        </button>
+    /* 1. MODAL BACKDROP — Fixed to viewport, prevents background interaction */
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn"
+      onClick={handleClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="enquiry-modal-title"
+    >
+      {/* 2. MODAL CONTAINER — Viewport constrained, flex column, overflow hidden */}
+      <div
+        onClick={(e) => e.stopPropagation()}
+        data-lenis-prevent="true"
+        className="
+          relative w-full max-w-lg
+          h-[min(90vh,760px)] max-h-[calc(100dvh-2rem)]
+          flex flex-col
+          rounded-2xl bg-[#0D0D0D]
+          border border-[#FFD700]/30
+          text-white shadow-[0_0_50px_rgba(0,0,0,0.9)]
+          overflow-hidden
+        "
+      >
+        {/* 3. MODAL HEADER — Fixed within the modal, never scrolls */}
+        <div className="flex-shrink-0 px-6 pt-5 pb-4 sm:px-8 sm:pt-6 sm:pb-5 border-b border-white/10 flex items-start justify-between gap-3 bg-[#0D0D0D]">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <Compass className="w-4 h-4 text-[#FFD700]" />
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#FFD700]">
+                Bespoke Journey Curation
+              </span>
+            </div>
+            <h2
+              id="enquiry-modal-title"
+              className="text-xl sm:text-2xl font-bold font-syne text-white uppercase tracking-tight"
+            >
+              Plan Your Journey
+            </h2>
+            <p className="text-xs text-[#A3A3A3] mt-0.5">
+              Fill out the details below. We will record your enquiry and connect on WhatsApp.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={handleClose}
+            className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-[#FFD700] transition-colors flex-shrink-0"
+            aria-label="Close modal"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
 
         {isSubmitted ? (
-          /* SUCCESS CONFIRMATION VIEW */
-          <div className="text-center py-8 px-2 space-y-4 animate-fadeIn">
+          /* SUCCESS VIEW */
+          <div
+            data-lenis-prevent="true"
+            className="flex-1 min-h-0 flex flex-col items-center justify-center text-center p-6 sm:p-8 space-y-4 animate-fadeIn overflow-y-auto"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
             <div className="w-16 h-16 rounded-full bg-[#FFD700]/15 text-[#FFD700] border border-[#FFD700]/40 flex items-center justify-center mx-auto mb-2 shadow-[0_0_20px_rgba(255,215,0,0.2)]">
               <CheckCircle2 className="w-9 h-9" />
             </div>
@@ -188,24 +247,25 @@ export default function EnquiryModal({
           </div>
         ) : (
           /* FORM VIEW */
-          <div>
-            {/* Header */}
-            <div className="mb-6 pb-4 border-b border-white/10">
-              <div className="flex items-center gap-2 mb-1">
-                <Compass className="w-4 h-4 text-[#FFD700]" />
-                <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#FFD700]">
-                  Bespoke Journey Curation
-                </span>
-              </div>
-              <h2 className="text-xl sm:text-2xl font-bold font-syne text-white uppercase tracking-tight">
-                Plan Your Journey
-              </h2>
-              <p className="text-xs text-[#A3A3A3] mt-1">
-                Fill out the details below. We will record your enquiry and open direct WhatsApp coordination.
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4 font-sans text-xs">
+          <form onSubmit={handleSubmit} className="flex flex-col flex-1 min-h-0">
+            {/* 4. MODAL CONTENT — Independent vertical scroll area */}
+            <div
+              data-lenis-prevent="true"
+              className="
+                flex-1 min-h-0
+                overflow-y-auto overflow-x-hidden
+                overscroll-contain
+                px-6 py-5 sm:px-8 sm:py-6
+                space-y-4
+                font-sans text-xs
+              "
+              style={{
+                WebkitOverflowScrolling: "touch",
+                scrollbarWidth: "thin",
+              }}
+              tabIndex={0}
+              aria-label="Enquiry Form Fields"
+            >
               {/* Full Name */}
               <div>
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-white/90 mb-1.5 flex items-center gap-1.5">
@@ -371,35 +431,34 @@ export default function EnquiryModal({
                   className="w-full bg-[#141414] text-white px-3.5 py-2 rounded-xl border border-white/15 focus:border-[#FFD700] focus:outline-none resize-none leading-relaxed"
                 />
               </div>
+            </div>
 
-              {/* Submit Button */}
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#FFD700] hover:bg-white text-black font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,215,0,0.25)] disabled:opacity-50 cursor-pointer text-xs"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-black" />
-                      <span>Recording &amp; Connecting...</span>
-                    </>
-                  ) : (
-                    <>
-                      <MessageCircle className="w-4 h-4 text-black" />
-                      <span>Enquire Through WhatsApp</span>
-                    </>
-                  )}
-                </button>
-                <p className="text-[10px] text-center text-[#737373] mt-2">
-                  🔒 Your enquiry will be securely logged in our concierge desk and opened in WhatsApp.
-                </p>
-              </div>
-            </form>
-          </div>
+            {/* 5. MODAL FOOTER — Fixed at the bottom, submit button always accessible */}
+            <div className="flex-shrink-0 px-6 py-4 sm:px-8 border-t border-white/10 bg-[#0D0D0D]">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#FFD700] hover:bg-white text-black font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,215,0,0.25)] disabled:opacity-50 cursor-pointer text-xs"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin text-black" />
+                    <span>Recording &amp; Connecting...</span>
+                  </>
+                ) : (
+                  <>
+                    <MessageCircle className="w-4 h-4 text-black" />
+                    <span>Enquire Through WhatsApp</span>
+                  </>
+                )}
+              </button>
+              <p className="text-[10px] text-center text-[#737373] mt-2">
+                🔒 Your enquiry will be securely logged in our concierge desk and opened in WhatsApp.
+              </p>
+            </div>
+          </form>
         )}
       </div>
     </div>
   );
 }
-

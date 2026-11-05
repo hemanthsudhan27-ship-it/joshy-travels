@@ -12,8 +12,8 @@ import {
   typingDelay,
   FALLBACK_RESPONSE,
   GREETING_MESSAGE,
-  buildChatbotWhatsAppUrl,
 } from "@/lib/chatbot/chatbot-utils";
+import { useScrollLock } from "@/lib/scroll-lock";
 
 interface ChatWindowProps {
   onClose: () => void;
@@ -21,21 +21,51 @@ interface ChatWindowProps {
 }
 
 export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
+  // Lock background website scrolling while chatbot is open; restore on close
+  useScrollLock(true, "chatbot");
+
   const [messages, setMessages] = useState<ChatMessageType[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
   const [lastAnswerHadWhatsapp, setLastAnswerHadWhatsapp] = useState(false);
+
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const isNearBottomRef = useRef(true);
   const initialized = useRef(false);
 
-  // Scroll to bottom
-  const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  // Track if user is scrolled near bottom
+  const handleScroll = useCallback(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    const distanceToBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+    isNearBottomRef.current = distanceToBottom <= 80;
   }, []);
 
+  // Scroll to bottom (only when user is near bottom, or when forced by user action)
+  const scrollToBottom = useCallback((force = false) => {
+    if (force || isNearBottomRef.current) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  // Auto-scroll when messages update
   useEffect(() => {
-    scrollToBottom();
+    const lastMsg = messages[messages.length - 1];
+    const isUserAction = lastMsg?.role === "user";
+    scrollToBottom(isUserAction);
   }, [messages, isTyping, scrollToBottom]);
 
   // Send initial greeting once
@@ -165,6 +195,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
         w-[calc(100vw-2rem)] max-w-sm
         sm:right-6 sm:w-96
         h-[min(580px,calc(100dvh-7rem))]
+        max-h-[calc(100dvh-7rem)]
         flex flex-col
         bg-black/95 backdrop-blur-xl
         border border-white/10
@@ -175,12 +206,30 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
       role="dialog"
       aria-label="Joshy Travel Assistant Chat"
       aria-modal="true"
+      data-lenis-prevent="true"
     >
-      {/* Header */}
+      {/* 1. CHATBOT HEADER — Fixed within chatbot layout */}
       <ChatHeader onClose={onClose} onMinimize={onMinimize} />
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-3 pt-4 pb-2 scroll-smooth" style={{ scrollbarWidth: "none" }}>
+      {/* 2. CHATBOT MESSAGE AREA — Independent scroll container */}
+      <div
+        ref={scrollContainerRef}
+        onScroll={handleScroll}
+        data-lenis-prevent="true"
+        className="
+          flex-1 min-h-0
+          overflow-y-auto overflow-x-hidden
+          overscroll-contain
+          px-3 pt-4 pb-2
+          scroll-smooth
+        "
+        style={{
+          WebkitOverflowScrolling: "touch",
+          scrollbarWidth: "thin",
+        }}
+        tabIndex={0}
+        aria-label="Conversation history"
+      >
         {messages.map((msg) => (
           <ChatMessage
             key={msg.id}
@@ -196,17 +245,22 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
           </div>
         )}
 
+        {/* Bottom sentinel for scroll calculations */}
         <div ref={messagesEndRef} />
       </div>
 
       {/* Suggested questions (shown until first user interaction) */}
       {showSuggestions && !isTyping && (
-        <div className="border-t border-white/5 pt-2">
+        <div
+          data-lenis-prevent="true"
+          className="flex-shrink-0 border-t border-white/5 pt-2 max-h-36 overflow-y-auto overscroll-contain"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           <SuggestedQuestions onSelect={handleSuggestionClick} />
         </div>
       )}
 
-      {/* Input */}
+      {/* 3. CHATBOT INPUT AREA — Fixed at the bottom of chatbot container */}
       <ChatInput
         value={inputValue}
         onChange={setInputValue}
@@ -216,4 +270,3 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
     </div>
   );
 }
-
