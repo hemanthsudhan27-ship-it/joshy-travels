@@ -1,20 +1,5 @@
 [
   {
-    "id": "enq-1730560001",
-    "createdAt": "2026-11-02T10:15:00.000Z",
-    "name": "Vikramaditya Sharma",
-    "phone": "+91 98451 23456",
-    "email": "vikram.sharma@example.com",
-    "destination": "Switzerland Explorer",
-    "packageSlug": "switzerland-explorer",
-    "adults": "2",
-    "children": "1",
-    "preferredDate": "2026-12-20",
-    "message": "Interested in private chalet stays with direct Matterhorn views and first-class Glacier Express tickets.",
-    "status": "pending",
-    "notes": "Prefers evening contact after 6 PM."
-  },
-  {
     "id": "enq-1730558002",
     "createdAt": "2026-11-01T16:30:00.000Z",
     "name": "Priya Nair",
